@@ -1,0 +1,253 @@
+{
+  "header" : {
+    "dataModelVersion" : "3"
+  },
+  "content" : {
+    "flowSnapshot" : {
+      "externalControllerServices" : { },
+      "flowContents" : {
+        "comments" : "{ \"version\": \"9.1.16.0\",  \"level\": \"9.1.16.0/search-registry-app=v9-20240823-1555\" }",
+        "componentType" : "PROCESS_GROUP",
+        "connections" : [ {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "3dbb3d79-3fe3-32ff-ba21-013368adc279",
+            "id" : "745098c1-c4c6-3d02-80cd-91ea546cd00b",
+            "name" : "Route on index name",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "3dbb3d79-3fe3-32ff-ba21-013368adc279",
+          "identifier" : "51bc3b85-82a4-351f-9574-99181c53b910",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "3dbb3d79-3fe3-32ff-ba21-013368adc279",
+            "id" : "168ed2fa-ce2c-38c1-9157-39a1405e6ec6",
+            "name" : "INPUT",
+            "type" : "INPUT_PORT"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "3dbb3d79-3fe3-32ff-ba21-013368adc279",
+            "id" : "745098c1-c4c6-3d02-80cd-91ea546cd00b",
+            "name" : "Route on index name",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "3dbb3d79-3fe3-32ff-ba21-013368adc279",
+          "identifier" : "63a81cf3-45c2-3edc-8f66-036411aec186",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "" ],
+          "source" : {
+            "groupId" : "3f8b3e89-0524-3c97-83c9-78e8407f1773",
+            "id" : "76c6e348-c3a2-30f5-b856-2dc6eca58c32",
+            "name" : "OUTPUT",
+            "type" : "OUTPUT_PORT"
+          },
+          "zIndex" : 0
+        } ],
+        "controllerServices" : [ ],
+        "flowFileConcurrency" : "UNBOUNDED",
+        "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+        "funnels" : [ ],
+        "identifier" : "3dbb3d79-3fe3-32ff-ba21-013368adc279",
+        "inputPorts" : [ {
+          "allowRemoteAccess" : false,
+          "comments" : "",
+          "componentType" : "INPUT_PORT",
+          "concurrentlySchedulableTaskCount" : 1,
+          "groupIdentifier" : "3dbb3d79-3fe3-32ff-ba21-013368adc279",
+          "identifier" : "168ed2fa-ce2c-38c1-9157-39a1405e6ec6",
+          "name" : "INPUT",
+          "position" : {
+            "x" : 960.0,
+            "y" : 320.0
+          },
+          "scheduledState" : "ENABLED",
+          "type" : "INPUT_PORT"
+        } ],
+        "labels" : [ {
+          "componentType" : "LABEL",
+          "groupIdentifier" : "3dbb3d79-3fe3-32ff-ba21-013368adc279",
+          "height" : 616.0,
+          "identifier" : "c1c94795-2514-3950-b15f-e2d4df51c6b1",
+          "label" : "Routing Service",
+          "position" : {
+            "x" : 1072.0,
+            "y" : -128.0
+          },
+          "style" : {
+            "background-color" : "#cceeff",
+            "font-size" : "20px"
+          },
+          "width" : 976.0
+        } ],
+        "name" : "Routing Service",
+        "outputPorts" : [ ],
+        "position" : {
+          "x" : 1640.0,
+          "y" : -352.0
+        },
+        "processGroups" : [ {
+          "comments" : "",
+          "componentType" : "PROCESS_GROUP",
+          "connections" : [ {
+            "backPressureDataSizeThreshold" : "1 GB",
+            "backPressureObjectThreshold" : 10000,
+            "bends" : [ ],
+            "componentType" : "CONNECTION",
+            "destination" : {
+              "groupId" : "3f8b3e89-0524-3c97-83c9-78e8407f1773",
+              "id" : "76c6e348-c3a2-30f5-b856-2dc6eca58c32",
+              "name" : "OUTPUT",
+              "type" : "OUTPUT_PORT"
+            },
+            "flowFileExpiration" : "0 sec",
+            "groupIdentifier" : "3f8b3e89-0524-3c97-83c9-78e8407f1773",
+            "identifier" : "eea7d700-95fd-35f1-a17f-26cedd6ae541",
+            "labelIndex" : 1,
+            "loadBalanceCompression" : "DO_NOT_COMPRESS",
+            "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+            "name" : "",
+            "partitioningAttribute" : "",
+            "prioritizers" : [ ],
+            "selectedRelationships" : [ "" ],
+            "source" : {
+              "comments" : "",
+              "groupId" : "3f8b3e89-0524-3c97-83c9-78e8407f1773",
+              "id" : "37db85c1-022c-3257-acdf-c9d633da3cbe",
+              "name" : "Routing INPUT",
+              "type" : "INPUT_PORT"
+            },
+            "zIndex" : 0
+          } ],
+          "controllerServices" : [ ],
+          "flowFileConcurrency" : "UNBOUNDED",
+          "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+          "funnels" : [ ],
+          "groupIdentifier" : "3dbb3d79-3fe3-32ff-ba21-013368adc279",
+          "identifier" : "3f8b3e89-0524-3c97-83c9-78e8407f1773",
+          "inputPorts" : [ {
+            "allowRemoteAccess" : true,
+            "comments" : "",
+            "componentType" : "INPUT_PORT",
+            "concurrentlySchedulableTaskCount" : 4,
+            "groupIdentifier" : "3f8b3e89-0524-3c97-83c9-78e8407f1773",
+            "identifier" : "37db85c1-022c-3257-acdf-c9d633da3cbe",
+            "name" : "Routing INPUT",
+            "position" : {
+              "x" : 824.0,
+              "y" : 336.0
+            },
+            "scheduledState" : "ENABLED",
+            "type" : "INPUT_PORT"
+          } ],
+          "labels" : [ {
+            "componentType" : "LABEL",
+            "groupIdentifier" : "3f8b3e89-0524-3c97-83c9-78e8407f1773",
+            "height" : 216.0,
+            "identifier" : "5b213912-28f1-3550-b8ea-4ccfaffd7d1e",
+            "label" : "Remote Join Connection",
+            "position" : {
+              "x" : 744.0,
+              "y" : 264.0
+            },
+            "style" : {
+              "background-color" : "#cceeff",
+              "font-size" : "20px"
+            },
+            "width" : 400.0
+          } ],
+          "name" : "Remote Join Connection",
+          "outputPorts" : [ {
+            "allowRemoteAccess" : false,
+            "componentType" : "OUTPUT_PORT",
+            "concurrentlySchedulableTaskCount" : 1,
+            "groupIdentifier" : "3f8b3e89-0524-3c97-83c9-78e8407f1773",
+            "identifier" : "76c6e348-c3a2-30f5-b856-2dc6eca58c32",
+            "name" : "OUTPUT",
+            "position" : {
+              "x" : 824.0,
+              "y" : 520.0
+            },
+            "scheduledState" : "ENABLED",
+            "type" : "OUTPUT_PORT"
+          } ],
+          "position" : {
+            "x" : 1576.0,
+            "y" : -48.0
+          },
+          "processGroups" : [ ],
+          "processors" : [ ],
+          "remoteProcessGroups" : [ ],
+          "variables" : { }
+        } ],
+        "processors" : [ {
+          "autoTerminatedRelationships" : [ "unmatched" ],
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-standard-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.22.0"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 4,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "3dbb3d79-3fe3-32ff-ba21-013368adc279",
+          "identifier" : "745098c1-c4c6-3d02-80cd-91ea546cd00b",
+          "name" : "Route on index name",
+          "penaltyDuration" : "0 sec",
+          "position" : {
+            "x" : 1592.0,
+            "y" : 280.0
+          },
+          "properties" : {
+            "Routing Strategy" : "Route to Property name"
+          },
+          "propertyDescriptors" : {
+            "Routing Strategy" : {
+              "displayName" : "Routing Strategy",
+              "identifiesControllerService" : false,
+              "name" : "Routing Strategy",
+              "sensitive" : false
+            }
+          },
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.standard.RouteOnAttribute",
+          "yieldDuration" : "1 sec"
+        } ],
+        "remoteProcessGroups" : [ ],
+        "variables" : { }
+      },
+      "flowEncodingVersion" : "1.0",
+      "parameterContexts" : { }
+    }
+  }
+}

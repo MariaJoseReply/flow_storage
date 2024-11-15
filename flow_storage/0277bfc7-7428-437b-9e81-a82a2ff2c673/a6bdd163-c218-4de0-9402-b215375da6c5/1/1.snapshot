@@ -1,0 +1,3235 @@
+{
+  "header" : {
+    "dataModelVersion" : "3"
+  },
+  "content" : {
+    "flowSnapshot" : {
+      "externalControllerServices" : { },
+      "flowContents" : {
+        "comments" : "{ \"version\": \"9.1.16.0\",  \"level\": \"9.1.16.0/search-registry-app=v9-20240823-1555\" }",
+        "componentType" : "PROCESS_GROUP",
+        "connections" : [ {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "eacd9845-ea77-30e7-b243-1cbd532b8fea",
+            "id" : "eea71aaa-6c74-3c3b-9b11-d08b2c8239fb",
+            "instanceIdentifier" : "8712ea73-5a72-37c5-52f4-fee3c4b0d5c7",
+            "name" : "OUTPUT",
+            "type" : "OUTPUT_PORT"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "eacd9845-ea77-30e7-b243-1cbd532b8fea",
+          "identifier" : "6d47b3e6-865b-32c1-8a5d-744d78df876d",
+          "instanceIdentifier" : "57dec216-a29b-3f82-42db-d1fde7acafbe",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "72a7782b-2acc-319d-abb6-41fdcfc5a77e",
+            "id" : "689bf325-a90c-39e1-987a-199999428c7e",
+            "instanceIdentifier" : "ef3f28ed-9140-3328-91f1-b2621d6bb5b1",
+            "name" : "OUTPUT",
+            "type" : "OUTPUT_PORT"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "72a7782b-2acc-319d-abb6-41fdcfc5a77e",
+            "id" : "e604844a-4e43-3321-a824-291ab6ae9c65",
+            "instanceIdentifier" : "80c0a3b3-9eb1-305e-fad2-95741a37a3a6",
+            "name" : "INPUT",
+            "type" : "INPUT_PORT"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "eacd9845-ea77-30e7-b243-1cbd532b8fea",
+          "identifier" : "bda3b9ee-83c8-392f-8926-5466aab440c4",
+          "instanceIdentifier" : "f3cd0e13-3b29-3517-8803-7842349bdad6",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "eacd9845-ea77-30e7-b243-1cbd532b8fea",
+            "id" : "4fceb960-ab77-30ab-9c2c-f37f1a1189aa",
+            "instanceIdentifier" : "481f9ed3-74a2-38bb-31ee-03991b964cbe",
+            "name" : "INPUT",
+            "type" : "INPUT_PORT"
+          },
+          "zIndex" : 0
+        } ],
+        "controllerServices" : [ {
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "commerce-search-processors-nar",
+            "group" : "com.hcl.commerce",
+            "version" : "9.1.16.0"
+          },
+          "comments" : "",
+          "componentType" : "CONTROLLER_SERVICE",
+          "controllerServiceApis" : [ {
+            "bundle" : {
+              "artifact" : "commerce-search-processors-nar",
+              "group" : "com.hcl.commerce",
+              "version" : "9.1.16.0"
+            },
+            "type" : "com.hcl.software.data.ingest.controller.service.CatalogService"
+          } ],
+          "groupIdentifier" : "eacd9845-ea77-30e7-b243-1cbd532b8fea",
+          "identifier" : "fdc215f9-c228-32b6-a12b-e127430161eb",
+          "instanceIdentifier" : "6634fee0-b160-3ee0-afd3-d15cfbc4f9d5",
+          "name" : "Catalog Controller Service",
+          "properties" : {
+            "Retry Limit" : "500",
+            "Scroll Size" : "20000"
+          },
+          "propertyDescriptors" : {
+            "Retry Limit" : {
+              "displayName" : "Retry Limit",
+              "identifiesControllerService" : false,
+              "name" : "Retry Limit",
+              "sensitive" : false
+            },
+            "Scroll Size" : {
+              "displayName" : "Scroll Size",
+              "identifiesControllerService" : false,
+              "name" : "Scroll Size",
+              "sensitive" : false
+            }
+          },
+          "scheduledState" : "DISABLED",
+          "type" : "com.hcl.software.data.ingest.controller.service.CatalogControllerService"
+        }, {
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-dbcp-service-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.22.0"
+          },
+          "comments" : "",
+          "componentType" : "CONTROLLER_SERVICE",
+          "controllerServiceApis" : [ {
+            "bundle" : {
+              "artifact" : "nifi-standard-services-api-nar",
+              "group" : "org.apache.nifi",
+              "version" : "1.22.0"
+            },
+            "type" : "org.apache.nifi.dbcp.DBCPService"
+          } ],
+          "groupIdentifier" : "eacd9845-ea77-30e7-b243-1cbd532b8fea",
+          "identifier" : "454852e3-7596-3f39-8e70-058b07f95ee0",
+          "instanceIdentifier" : "917a50a0-4365-34a0-2115-89d1fb4ae6c9",
+          "name" : "Database Connection Pool",
+          "properties" : {
+            "CURSOR_HOLDABILITY" : "1",
+            "dbcp-min-idle-conns" : "0",
+            "Max Wait Time" : "500 millis",
+            "Database Driver Class Name" : "#{JDBC_DRIVER_CLASSNAME}",
+            "dbcp-min-evictable-idle-time" : "30 mins",
+            "AUTO_CASE_SCHEMA" : "true",
+            "Max Total Connections" : "8",
+            "IFX_ISOLATION_LEVEL" : "5U",
+            "METADATA_UPPERCASE_VALUES" : "true",
+            "dbcp-max-conn-lifetime" : "-1",
+            "Database Connection URL" : "#{JDBC_URL}",
+            "dbcp-time-between-eviction-runs" : "-1",
+            "Database User" : "#{JDBC_USER_NAME}",
+            "dbcp-soft-min-evictable-idle-time" : "-1",
+            "database-driver-locations" : "#{JDBC_DRIVER_LOCATION}",
+            "dbcp-max-idle-conns" : "8",
+            "FET_BUF_SIZE" : "256000",
+            "Password" : "#{JDBC_USER_PASSWORD}",
+            "IFX_LOCK_MODE_WAIT" : "15"
+          },
+          "propertyDescriptors" : {
+            "kerberos-password" : {
+              "displayName" : "Kerberos Password",
+              "identifiesControllerService" : false,
+              "name" : "kerberos-password",
+              "sensitive" : true
+            },
+            "CURSOR_HOLDABILITY" : {
+              "displayName" : "CURSOR_HOLDABILITY",
+              "identifiesControllerService" : false,
+              "name" : "CURSOR_HOLDABILITY",
+              "sensitive" : false
+            },
+            "dbcp-min-idle-conns" : {
+              "displayName" : "Minimum Idle Connections",
+              "identifiesControllerService" : false,
+              "name" : "dbcp-min-idle-conns",
+              "sensitive" : false
+            },
+            "Max Wait Time" : {
+              "displayName" : "Max Wait Time",
+              "identifiesControllerService" : false,
+              "name" : "Max Wait Time",
+              "sensitive" : false
+            },
+            "Database Driver Class Name" : {
+              "displayName" : "Database Driver Class Name",
+              "identifiesControllerService" : false,
+              "name" : "Database Driver Class Name",
+              "sensitive" : false
+            },
+            "dbcp-min-evictable-idle-time" : {
+              "displayName" : "Minimum Evictable Idle Time",
+              "identifiesControllerService" : false,
+              "name" : "dbcp-min-evictable-idle-time",
+              "sensitive" : false
+            },
+            "kerberos-principal" : {
+              "displayName" : "Kerberos Principal",
+              "identifiesControllerService" : false,
+              "name" : "kerberos-principal",
+              "sensitive" : false
+            },
+            "AUTO_CASE_SCHEMA" : {
+              "displayName" : "AUTO_CASE_SCHEMA",
+              "identifiesControllerService" : false,
+              "name" : "AUTO_CASE_SCHEMA",
+              "sensitive" : false
+            },
+            "Max Total Connections" : {
+              "displayName" : "Max Total Connections",
+              "identifiesControllerService" : false,
+              "name" : "Max Total Connections",
+              "sensitive" : false
+            },
+            "IFX_ISOLATION_LEVEL" : {
+              "displayName" : "IFX_ISOLATION_LEVEL",
+              "identifiesControllerService" : false,
+              "name" : "IFX_ISOLATION_LEVEL",
+              "sensitive" : false
+            },
+            "METADATA_UPPERCASE_VALUES" : {
+              "displayName" : "METADATA_UPPERCASE_VALUES",
+              "identifiesControllerService" : false,
+              "name" : "METADATA_UPPERCASE_VALUES",
+              "sensitive" : false
+            },
+            "kerberos-credentials-service" : {
+              "displayName" : "Kerberos Credentials Service",
+              "identifiesControllerService" : true,
+              "name" : "kerberos-credentials-service",
+              "sensitive" : false
+            },
+            "dbcp-max-conn-lifetime" : {
+              "displayName" : "Max Connection Lifetime",
+              "identifiesControllerService" : false,
+              "name" : "dbcp-max-conn-lifetime",
+              "sensitive" : false
+            },
+            "Validation-query" : {
+              "displayName" : "Validation query",
+              "identifiesControllerService" : false,
+              "name" : "Validation-query",
+              "sensitive" : false
+            },
+            "Database Connection URL" : {
+              "displayName" : "Database Connection URL",
+              "identifiesControllerService" : false,
+              "name" : "Database Connection URL",
+              "sensitive" : false
+            },
+            "dbcp-time-between-eviction-runs" : {
+              "displayName" : "Time Between Eviction Runs",
+              "identifiesControllerService" : false,
+              "name" : "dbcp-time-between-eviction-runs",
+              "sensitive" : false
+            },
+            "Database User" : {
+              "displayName" : "Database User",
+              "identifiesControllerService" : false,
+              "name" : "Database User",
+              "sensitive" : false
+            },
+            "kerberos-user-service" : {
+              "displayName" : "Kerberos User Service",
+              "identifiesControllerService" : true,
+              "name" : "kerberos-user-service",
+              "sensitive" : false
+            },
+            "dbcp-soft-min-evictable-idle-time" : {
+              "displayName" : "Soft Minimum Evictable Idle Time",
+              "identifiesControllerService" : false,
+              "name" : "dbcp-soft-min-evictable-idle-time",
+              "sensitive" : false
+            },
+            "database-driver-locations" : {
+              "displayName" : "Database Driver Location(s)",
+              "identifiesControllerService" : false,
+              "name" : "database-driver-locations",
+              "resourceDefinition" : {
+                "cardinality" : "MULTIPLE",
+                "resourceTypes" : [ "FILE", "DIRECTORY", "URL" ]
+              },
+              "sensitive" : false
+            },
+            "dbcp-max-idle-conns" : {
+              "displayName" : "Max Idle Connections",
+              "identifiesControllerService" : false,
+              "name" : "dbcp-max-idle-conns",
+              "sensitive" : false
+            },
+            "FET_BUF_SIZE" : {
+              "displayName" : "FET_BUF_SIZE",
+              "identifiesControllerService" : false,
+              "name" : "FET_BUF_SIZE",
+              "sensitive" : false
+            },
+            "Password" : {
+              "displayName" : "Password",
+              "identifiesControllerService" : false,
+              "name" : "Password",
+              "sensitive" : true
+            },
+            "IFX_LOCK_MODE_WAIT" : {
+              "displayName" : "IFX_LOCK_MODE_WAIT",
+              "identifiesControllerService" : false,
+              "name" : "IFX_LOCK_MODE_WAIT",
+              "sensitive" : false
+            }
+          },
+          "scheduledState" : "DISABLED",
+          "type" : "org.apache.nifi.dbcp.DBCPConnectionPool"
+        }, {
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-record-serialization-services-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.22.0"
+          },
+          "comments" : "",
+          "componentType" : "CONTROLLER_SERVICE",
+          "controllerServiceApis" : [ {
+            "bundle" : {
+              "artifact" : "nifi-standard-services-api-nar",
+              "group" : "org.apache.nifi",
+              "version" : "1.22.0"
+            },
+            "type" : "org.apache.nifi.serialization.RecordSetWriterFactory"
+          } ],
+          "groupIdentifier" : "eacd9845-ea77-30e7-b243-1cbd532b8fea",
+          "identifier" : "86d146a5-07f9-3052-815c-ca2aa242ad4f",
+          "instanceIdentifier" : "dffb73a3-3289-3935-27b5-d58a2402c624",
+          "name" : "Json Record Set Writer",
+          "properties" : {
+            "compression-level" : "1",
+            "Pretty Print JSON" : "false",
+            "compression-format" : "none",
+            "Schema Write Strategy" : "no-schema",
+            "suppress-nulls" : "never-suppress",
+            "output-grouping" : "output-array",
+            "schema-name" : "${schema.name}",
+            "schema-access-strategy" : "inherit-record-schema",
+            "schema-protocol-version" : "1",
+            "schema-text" : "${avro.schema}"
+          },
+          "propertyDescriptors" : {
+            "schema-branch" : {
+              "displayName" : "Schema Branch",
+              "identifiesControllerService" : false,
+              "name" : "schema-branch",
+              "sensitive" : false
+            },
+            "compression-level" : {
+              "displayName" : "Compression Level",
+              "identifiesControllerService" : false,
+              "name" : "compression-level",
+              "sensitive" : false
+            },
+            "schema-cache" : {
+              "displayName" : "Schema Cache",
+              "identifiesControllerService" : true,
+              "name" : "schema-cache",
+              "sensitive" : false
+            },
+            "Timestamp Format" : {
+              "displayName" : "Timestamp Format",
+              "identifiesControllerService" : false,
+              "name" : "Timestamp Format",
+              "sensitive" : false
+            },
+            "Date Format" : {
+              "displayName" : "Date Format",
+              "identifiesControllerService" : false,
+              "name" : "Date Format",
+              "sensitive" : false
+            },
+            "Pretty Print JSON" : {
+              "displayName" : "Pretty Print JSON",
+              "identifiesControllerService" : false,
+              "name" : "Pretty Print JSON",
+              "sensitive" : false
+            },
+            "compression-format" : {
+              "displayName" : "Compression Format",
+              "identifiesControllerService" : false,
+              "name" : "compression-format",
+              "sensitive" : false
+            },
+            "Schema Write Strategy" : {
+              "displayName" : "Schema Write Strategy",
+              "identifiesControllerService" : false,
+              "name" : "Schema Write Strategy",
+              "sensitive" : false
+            },
+            "suppress-nulls" : {
+              "displayName" : "Suppress Null Values",
+              "identifiesControllerService" : false,
+              "name" : "suppress-nulls",
+              "sensitive" : false
+            },
+            "output-grouping" : {
+              "displayName" : "Output Grouping",
+              "identifiesControllerService" : false,
+              "name" : "output-grouping",
+              "sensitive" : false
+            },
+            "schema-name" : {
+              "displayName" : "Schema Name",
+              "identifiesControllerService" : false,
+              "name" : "schema-name",
+              "sensitive" : false
+            },
+            "schema-registry" : {
+              "displayName" : "Schema Registry",
+              "identifiesControllerService" : true,
+              "name" : "schema-registry",
+              "sensitive" : false
+            },
+            "Time Format" : {
+              "displayName" : "Time Format",
+              "identifiesControllerService" : false,
+              "name" : "Time Format",
+              "sensitive" : false
+            },
+            "schema-access-strategy" : {
+              "displayName" : "Schema Access Strategy",
+              "identifiesControllerService" : false,
+              "name" : "schema-access-strategy",
+              "sensitive" : false
+            },
+            "schema-protocol-version" : {
+              "displayName" : "Schema Protocol Version",
+              "identifiesControllerService" : false,
+              "name" : "schema-protocol-version",
+              "sensitive" : false
+            },
+            "schema-version" : {
+              "displayName" : "Schema Version",
+              "identifiesControllerService" : false,
+              "name" : "schema-version",
+              "sensitive" : false
+            },
+            "schema-text" : {
+              "displayName" : "Schema Text",
+              "identifiesControllerService" : false,
+              "name" : "schema-text",
+              "sensitive" : false
+            }
+          },
+          "scheduledState" : "DISABLED",
+          "type" : "org.apache.nifi.json.JsonRecordSetWriter"
+        }, {
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "commerce-search-processors-nar",
+            "group" : "com.hcl.commerce",
+            "version" : "9.1.16.0"
+          },
+          "comments" : "",
+          "componentType" : "CONTROLLER_SERVICE",
+          "controllerServiceApis" : [ {
+            "bundle" : {
+              "artifact" : "commerce-search-processors-nar",
+              "group" : "com.hcl.commerce",
+              "version" : "9.1.16.0"
+            },
+            "type" : "com.hcl.software.data.ingest.controller.service.ProfileService"
+          } ],
+          "groupIdentifier" : "eacd9845-ea77-30e7-b243-1cbd532b8fea",
+          "identifier" : "f46f2e5a-db35-3fcd-8f15-ead9034bdf72",
+          "instanceIdentifier" : "9275c479-29ee-32b1-c5cf-2739ed939bb7",
+          "name" : "Profile Controller Service",
+          "properties" : {
+            "Retry Limit" : "500"
+          },
+          "propertyDescriptors" : {
+            "Retry Limit" : {
+              "displayName" : "Retry Limit",
+              "identifiesControllerService" : false,
+              "name" : "Retry Limit",
+              "sensitive" : false
+            }
+          },
+          "scheduledState" : "DISABLED",
+          "type" : "com.hcl.software.data.ingest.controller.service.ProfileControllerService"
+        } ],
+        "defaultBackPressureDataSizeThreshold" : "1 GB",
+        "defaultBackPressureObjectThreshold" : 10000,
+        "defaultFlowFileExpiration" : "0 sec",
+        "flowFileConcurrency" : "UNBOUNDED",
+        "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+        "funnels" : [ ],
+        "identifier" : "eacd9845-ea77-30e7-b243-1cbd532b8fea",
+        "inputPorts" : [ {
+          "allowRemoteAccess" : false,
+          "comments" : "",
+          "componentType" : "INPUT_PORT",
+          "concurrentlySchedulableTaskCount" : 1,
+          "groupIdentifier" : "eacd9845-ea77-30e7-b243-1cbd532b8fea",
+          "identifier" : "4fceb960-ab77-30ab-9c2c-f37f1a1189aa",
+          "instanceIdentifier" : "481f9ed3-74a2-38bb-31ee-03991b964cbe",
+          "name" : "INPUT",
+          "position" : {
+            "x" : 536.0,
+            "y" : -136.0
+          },
+          "scheduledState" : "ENABLED",
+          "type" : "INPUT_PORT"
+        } ],
+        "instanceIdentifier" : "381ae2bb-018c-1000-9cf3-e9d964e2be42",
+        "labels" : [ {
+          "componentType" : "LABEL",
+          "groupIdentifier" : "eacd9845-ea77-30e7-b243-1cbd532b8fea",
+          "height" : 328.0,
+          "identifier" : "0b766a63-91ff-3456-823b-1a7ff2a985f5",
+          "instanceIdentifier" : "56315f7a-f4fe-3796-8db5-83fb70b3bc5e",
+          "label" : "URL - Stage 1d (Database)",
+          "position" : {
+            "x" : 384.0,
+            "y" : 96.0
+          },
+          "style" : {
+            "background-color" : "#cceeff",
+            "font-size" : "24px"
+          },
+          "width" : 544.0,
+          "zIndex" : 0
+        } ],
+        "name" : "URL - Stage 1d (Category URL Fallback)",
+        "outputPorts" : [ {
+          "allowRemoteAccess" : false,
+          "comments" : "",
+          "componentType" : "OUTPUT_PORT",
+          "concurrentlySchedulableTaskCount" : 1,
+          "groupIdentifier" : "eacd9845-ea77-30e7-b243-1cbd532b8fea",
+          "identifier" : "eea71aaa-6c74-3c3b-9b11-d08b2c8239fb",
+          "instanceIdentifier" : "8712ea73-5a72-37c5-52f4-fee3c4b0d5c7",
+          "name" : "OUTPUT",
+          "position" : {
+            "x" : 536.0,
+            "y" : 600.0
+          },
+          "scheduledState" : "ENABLED",
+          "type" : "OUTPUT_PORT"
+        } ],
+        "position" : {
+          "x" : 8661.53877796317,
+          "y" : 14089.481917411282
+        },
+        "processGroups" : [ {
+          "comments" : "",
+          "componentType" : "PROCESS_GROUP",
+          "connections" : [ {
+            "backPressureDataSizeThreshold" : "1 GB",
+            "backPressureObjectThreshold" : 10000,
+            "bends" : [ ],
+            "componentType" : "CONNECTION",
+            "destination" : {
+              "comments" : "",
+              "groupId" : "72a7782b-2acc-319d-abb6-41fdcfc5a77e",
+              "id" : "689bf325-a90c-39e1-987a-199999428c7e",
+              "instanceIdentifier" : "ef3f28ed-9140-3328-91f1-b2621d6bb5b1",
+              "name" : "OUTPUT",
+              "type" : "OUTPUT_PORT"
+            },
+            "flowFileExpiration" : "0 sec",
+            "groupIdentifier" : "72a7782b-2acc-319d-abb6-41fdcfc5a77e",
+            "identifier" : "2ee9efe5-4c6b-3e68-8136-122afd5a2386",
+            "instanceIdentifier" : "c90729f2-70bc-33e4-2607-2cd66f673d17",
+            "labelIndex" : 1,
+            "loadBalanceCompression" : "DO_NOT_COMPRESS",
+            "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+            "name" : "",
+            "partitioningAttribute" : "",
+            "prioritizers" : [ ],
+            "selectedRelationships" : [ "" ],
+            "source" : {
+              "comments" : "",
+              "groupId" : "0a4e1b92-d0d3-3222-af36-93d92e06e6be",
+              "id" : "15343f0b-4820-3001-a4da-ff81418f4359",
+              "instanceIdentifier" : "f5eff148-2f6a-3423-a560-d5b09071595e",
+              "name" : "NEXT",
+              "type" : "OUTPUT_PORT"
+            },
+            "zIndex" : 0
+          }, {
+            "backPressureDataSizeThreshold" : "1 GB",
+            "backPressureObjectThreshold" : 10000,
+            "bends" : [ ],
+            "componentType" : "CONNECTION",
+            "destination" : {
+              "comments" : "",
+              "groupId" : "6a664283-2602-36c8-97ad-2fdd227bc31f",
+              "id" : "ccb8119d-1567-3c29-a401-6874f8072c84",
+              "instanceIdentifier" : "135424bb-b3d7-3cfc-be0c-cd05a688a766",
+              "name" : "INPUT",
+              "type" : "INPUT_PORT"
+            },
+            "flowFileExpiration" : "0 sec",
+            "groupIdentifier" : "72a7782b-2acc-319d-abb6-41fdcfc5a77e",
+            "identifier" : "4b9ace14-cdf1-3ff8-9efb-71b8fdf5d36e",
+            "instanceIdentifier" : "b5cc704e-ccfa-3f39-9245-93ca6557d768",
+            "labelIndex" : 1,
+            "loadBalanceCompression" : "DO_NOT_COMPRESS",
+            "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+            "name" : "",
+            "partitioningAttribute" : "",
+            "prioritizers" : [ ],
+            "selectedRelationships" : [ "" ],
+            "source" : {
+              "comments" : "",
+              "groupId" : "0a4e1b92-d0d3-3222-af36-93d92e06e6be",
+              "id" : "1b1e05b6-ac3a-31c0-b14d-393013bd5573",
+              "instanceIdentifier" : "24cba5f0-1301-3149-e5d6-6111ab895742",
+              "name" : "OUTPUT",
+              "type" : "OUTPUT_PORT"
+            },
+            "zIndex" : 0
+          }, {
+            "backPressureDataSizeThreshold" : "1 GB",
+            "backPressureObjectThreshold" : 10000,
+            "bends" : [ ],
+            "componentType" : "CONNECTION",
+            "destination" : {
+              "groupId" : "671ac24b-1a8c-3fee-b049-bb9a5a509d00",
+              "id" : "9d7a873e-6920-34ed-b2bd-d296e3ea1f21",
+              "instanceIdentifier" : "92c9773c-25c5-3276-5277-ae033be44cc2",
+              "name" : "Bulk Category INPUT",
+              "type" : "REMOTE_INPUT_PORT"
+            },
+            "flowFileExpiration" : "0 sec",
+            "groupIdentifier" : "72a7782b-2acc-319d-abb6-41fdcfc5a77e",
+            "identifier" : "a05d2ade-5dba-3fd2-97f3-966391a16969",
+            "instanceIdentifier" : "83c6a8e0-2fb1-3b3a-83d0-849e2d397e35",
+            "labelIndex" : 1,
+            "loadBalanceCompression" : "DO_NOT_COMPRESS",
+            "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+            "name" : "",
+            "partitioningAttribute" : "",
+            "prioritizers" : [ ],
+            "selectedRelationships" : [ "" ],
+            "source" : {
+              "comments" : "",
+              "groupId" : "da09e4c7-02f1-3593-a2c7-35edf9e79388",
+              "id" : "688b384b-7561-3967-98c5-7e859a2638dd",
+              "instanceIdentifier" : "9fdbce33-7a8e-3f70-97cd-1ab2df35d706",
+              "name" : "OUTPUT",
+              "type" : "OUTPUT_PORT"
+            },
+            "zIndex" : 0
+          }, {
+            "backPressureDataSizeThreshold" : "1 GB",
+            "backPressureObjectThreshold" : 10000,
+            "bends" : [ ],
+            "componentType" : "CONNECTION",
+            "destination" : {
+              "comments" : "",
+              "groupId" : "da09e4c7-02f1-3593-a2c7-35edf9e79388",
+              "id" : "41c792bf-410e-3068-8424-c653c83ba4ae",
+              "instanceIdentifier" : "df9768ed-190a-3ab2-1466-f91f5772958a",
+              "name" : "INPUT",
+              "type" : "INPUT_PORT"
+            },
+            "flowFileExpiration" : "0 sec",
+            "groupIdentifier" : "72a7782b-2acc-319d-abb6-41fdcfc5a77e",
+            "identifier" : "9975f79d-ee11-392e-8bd1-854217646405",
+            "instanceIdentifier" : "37ea8a86-4916-32dd-0591-23262224e27d",
+            "labelIndex" : 1,
+            "loadBalanceCompression" : "DO_NOT_COMPRESS",
+            "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+            "name" : "",
+            "partitioningAttribute" : "",
+            "prioritizers" : [ ],
+            "selectedRelationships" : [ "" ],
+            "source" : {
+              "comments" : "",
+              "groupId" : "6a664283-2602-36c8-97ad-2fdd227bc31f",
+              "id" : "60d12313-facf-3e63-ad3a-1f4b622d0b47",
+              "instanceIdentifier" : "7d5d2e56-abc7-3760-f49f-bad0644655e9",
+              "name" : "SUCCESS",
+              "type" : "OUTPUT_PORT"
+            },
+            "zIndex" : 0
+          }, {
+            "backPressureDataSizeThreshold" : "1 GB",
+            "backPressureObjectThreshold" : 10000,
+            "bends" : [ {
+              "x" : 24.0,
+              "y" : 224.0
+            } ],
+            "componentType" : "CONNECTION",
+            "destination" : {
+              "groupId" : "50087271-b1e7-335c-9d7f-c9760a967e49",
+              "id" : "8b598489-58f7-315e-aea8-c6463e14f8e0",
+              "instanceIdentifier" : "81f0b84d-aec7-37e0-5c7f-f11fefe55d74",
+              "name" : "Terminal INPUT",
+              "type" : "REMOTE_INPUT_PORT"
+            },
+            "flowFileExpiration" : "0 sec",
+            "groupIdentifier" : "72a7782b-2acc-319d-abb6-41fdcfc5a77e",
+            "identifier" : "988b6238-9d6c-39bd-8ecd-a78534809fbe",
+            "instanceIdentifier" : "8d800d63-fd96-3155-4e87-184ee4674705",
+            "labelIndex" : 0,
+            "loadBalanceCompression" : "DO_NOT_COMPRESS",
+            "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+            "name" : "",
+            "partitioningAttribute" : "",
+            "prioritizers" : [ ],
+            "selectedRelationships" : [ "" ],
+            "source" : {
+              "comments" : "",
+              "groupId" : "6a664283-2602-36c8-97ad-2fdd227bc31f",
+              "id" : "60d90054-f784-371f-ba79-5ed3d93162b6",
+              "instanceIdentifier" : "78e1b1e8-1cda-377d-c0de-bbc69af5b082",
+              "name" : "EMPTY",
+              "type" : "OUTPUT_PORT"
+            },
+            "zIndex" : 0
+          }, {
+            "backPressureDataSizeThreshold" : "1 GB",
+            "backPressureObjectThreshold" : 10000,
+            "bends" : [ ],
+            "componentType" : "CONNECTION",
+            "destination" : {
+              "groupId" : "50087271-b1e7-335c-9d7f-c9760a967e49",
+              "id" : "8b598489-58f7-315e-aea8-c6463e14f8e0",
+              "instanceIdentifier" : "81f0b84d-aec7-37e0-5c7f-f11fefe55d74",
+              "name" : "Terminal INPUT",
+              "type" : "REMOTE_INPUT_PORT"
+            },
+            "flowFileExpiration" : "0 sec",
+            "groupIdentifier" : "72a7782b-2acc-319d-abb6-41fdcfc5a77e",
+            "identifier" : "cb1e9e90-65ea-3835-9627-b8784e207d06",
+            "instanceIdentifier" : "8e4ce1ff-760b-3f15-cecf-48a0a2730fdb",
+            "labelIndex" : 0,
+            "loadBalanceCompression" : "DO_NOT_COMPRESS",
+            "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+            "name" : "",
+            "partitioningAttribute" : "",
+            "prioritizers" : [ ],
+            "selectedRelationships" : [ "" ],
+            "source" : {
+              "comments" : "",
+              "groupId" : "6a664283-2602-36c8-97ad-2fdd227bc31f",
+              "id" : "1a85c2ee-3035-3287-b748-36edf2c0a93f",
+              "instanceIdentifier" : "e8916ee6-1705-3eac-bb77-459ad6421077",
+              "name" : "ERROR",
+              "type" : "OUTPUT_PORT"
+            },
+            "zIndex" : 0
+          }, {
+            "backPressureDataSizeThreshold" : "1 GB",
+            "backPressureObjectThreshold" : 10000,
+            "bends" : [ ],
+            "componentType" : "CONNECTION",
+            "destination" : {
+              "groupId" : "50087271-b1e7-335c-9d7f-c9760a967e49",
+              "id" : "4141a808-fe44-374a-83b8-6c380e1a4d59",
+              "instanceIdentifier" : "d7a0e4f7-d242-3a9f-6e70-9775188d1a8d",
+              "name" : "Logger INPUT",
+              "type" : "REMOTE_INPUT_PORT"
+            },
+            "flowFileExpiration" : "0 sec",
+            "groupIdentifier" : "72a7782b-2acc-319d-abb6-41fdcfc5a77e",
+            "identifier" : "a43d6e23-1309-33b5-b2fe-656531e8a4bc",
+            "instanceIdentifier" : "e05bbf1a-1705-32a1-e8a7-d5833275ab63",
+            "labelIndex" : 0,
+            "loadBalanceCompression" : "DO_NOT_COMPRESS",
+            "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+            "name" : "",
+            "partitioningAttribute" : "",
+            "prioritizers" : [ ],
+            "selectedRelationships" : [ "" ],
+            "source" : {
+              "comments" : "",
+              "groupId" : "da09e4c7-02f1-3593-a2c7-35edf9e79388",
+              "id" : "fcda9a5f-7b9b-3abe-962d-bed01d06d61e",
+              "instanceIdentifier" : "252d0d1e-205b-378a-2a55-8fea28e638a8",
+              "name" : "ERROR",
+              "type" : "OUTPUT_PORT"
+            },
+            "zIndex" : 0
+          }, {
+            "backPressureDataSizeThreshold" : "1 GB",
+            "backPressureObjectThreshold" : 10000,
+            "bends" : [ ],
+            "componentType" : "CONNECTION",
+            "destination" : {
+              "comments" : "",
+              "groupId" : "0a4e1b92-d0d3-3222-af36-93d92e06e6be",
+              "id" : "8fafa0c1-6c8f-369a-883b-9899ded3ea64",
+              "instanceIdentifier" : "52f5f852-467a-3c01-6d1a-c2ab9a32a0ec",
+              "name" : "INPUT",
+              "type" : "INPUT_PORT"
+            },
+            "flowFileExpiration" : "0 sec",
+            "groupIdentifier" : "72a7782b-2acc-319d-abb6-41fdcfc5a77e",
+            "identifier" : "5a5565e0-1a2f-3ae6-a76a-c94263fe5984",
+            "instanceIdentifier" : "a23ddd5c-1cc5-3b92-ed80-5e5c4fa1f8c5",
+            "labelIndex" : 1,
+            "loadBalanceCompression" : "DO_NOT_COMPRESS",
+            "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+            "name" : "",
+            "partitioningAttribute" : "",
+            "prioritizers" : [ ],
+            "selectedRelationships" : [ "" ],
+            "source" : {
+              "comments" : "",
+              "groupId" : "72a7782b-2acc-319d-abb6-41fdcfc5a77e",
+              "id" : "e604844a-4e43-3321-a824-291ab6ae9c65",
+              "instanceIdentifier" : "80c0a3b3-9eb1-305e-fad2-95741a37a3a6",
+              "name" : "INPUT",
+              "type" : "INPUT_PORT"
+            },
+            "zIndex" : 0
+          } ],
+          "controllerServices" : [ ],
+          "defaultBackPressureDataSizeThreshold" : "1 GB",
+          "defaultBackPressureObjectThreshold" : 10000,
+          "defaultFlowFileExpiration" : "0 sec",
+          "flowFileConcurrency" : "UNBOUNDED",
+          "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+          "funnels" : [ ],
+          "groupIdentifier" : "eacd9845-ea77-30e7-b243-1cbd532b8fea",
+          "identifier" : "72a7782b-2acc-319d-abb6-41fdcfc5a77e",
+          "inputPorts" : [ {
+            "allowRemoteAccess" : false,
+            "comments" : "",
+            "componentType" : "INPUT_PORT",
+            "concurrentlySchedulableTaskCount" : 1,
+            "groupIdentifier" : "72a7782b-2acc-319d-abb6-41fdcfc5a77e",
+            "identifier" : "e604844a-4e43-3321-a824-291ab6ae9c65",
+            "instanceIdentifier" : "80c0a3b3-9eb1-305e-fad2-95741a37a3a6",
+            "name" : "INPUT",
+            "position" : {
+              "x" : 968.0,
+              "y" : -120.0
+            },
+            "scheduledState" : "ENABLED",
+            "type" : "INPUT_PORT"
+          } ],
+          "instanceIdentifier" : "99c356fb-6c79-3cb2-f62d-c58b0b619a64",
+          "labels" : [ {
+            "componentType" : "LABEL",
+            "groupIdentifier" : "72a7782b-2acc-319d-abb6-41fdcfc5a77e",
+            "height" : 696.0,
+            "identifier" : "8e44cec7-2bcb-33d1-b73e-cbb4360fe21f",
+            "instanceIdentifier" : "df6b8fdb-6b4a-314f-fa58-fb71627c27bb",
+            "label" : "Update Category URL Fallback",
+            "position" : {
+              "x" : -600.0,
+              "y" : -24.0
+            },
+            "style" : {
+              "background-color" : "#cceeff",
+              "font-size" : "24px"
+            },
+            "width" : 1960.0,
+            "zIndex" : 0
+          } ],
+          "name" : "Update Category URL Fallback",
+          "outputPorts" : [ {
+            "allowRemoteAccess" : false,
+            "comments" : "",
+            "componentType" : "OUTPUT_PORT",
+            "concurrentlySchedulableTaskCount" : 1,
+            "groupIdentifier" : "72a7782b-2acc-319d-abb6-41fdcfc5a77e",
+            "identifier" : "689bf325-a90c-39e1-987a-199999428c7e",
+            "instanceIdentifier" : "ef3f28ed-9140-3328-91f1-b2621d6bb5b1",
+            "name" : "OUTPUT",
+            "position" : {
+              "x" : 968.0,
+              "y" : 728.0
+            },
+            "scheduledState" : "ENABLED",
+            "type" : "OUTPUT_PORT"
+          } ],
+          "position" : {
+            "x" : 464.0,
+            "y" : 176.0
+          },
+          "processGroups" : [ {
+            "comments" : "",
+            "componentType" : "PROCESS_GROUP",
+            "connections" : [ {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "",
+                "groupId" : "da09e4c7-02f1-3593-a2c7-35edf9e79388",
+                "id" : "2b146598-bd1c-3be5-896c-919b08849182",
+                "instanceIdentifier" : "dff19e47-85dc-34e1-bdeb-0d4f533e1785",
+                "name" : "Transform Document - Update Category URL Fallback From Database",
+                "type" : "PROCESSOR"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "da09e4c7-02f1-3593-a2c7-35edf9e79388",
+              "identifier" : "f301a2ef-f71d-32cd-81d0-9d5f6996e14f",
+              "instanceIdentifier" : "b362e14a-5e39-3441-7b72-49a7b842d1d7",
+              "labelIndex" : 1,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "partitioningAttribute" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "" ],
+              "source" : {
+                "comments" : "",
+                "groupId" : "da09e4c7-02f1-3593-a2c7-35edf9e79388",
+                "id" : "41c792bf-410e-3068-8424-c653c83ba4ae",
+                "instanceIdentifier" : "df9768ed-190a-3ab2-1466-f91f5772958a",
+                "name" : "INPUT",
+                "type" : "INPUT_PORT"
+              },
+              "zIndex" : 0
+            }, {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "",
+                "groupId" : "da09e4c7-02f1-3593-a2c7-35edf9e79388",
+                "id" : "fcda9a5f-7b9b-3abe-962d-bed01d06d61e",
+                "instanceIdentifier" : "252d0d1e-205b-378a-2a55-8fea28e638a8",
+                "name" : "ERROR",
+                "type" : "OUTPUT_PORT"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "da09e4c7-02f1-3593-a2c7-35edf9e79388",
+              "identifier" : "503c1c67-19eb-312b-90b6-6332bbc8e1ac",
+              "instanceIdentifier" : "c9d38bf7-5388-3afd-4035-e3649a71c6db",
+              "labelIndex" : 1,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "partitioningAttribute" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "failure" ],
+              "source" : {
+                "comments" : "",
+                "groupId" : "da09e4c7-02f1-3593-a2c7-35edf9e79388",
+                "id" : "2b146598-bd1c-3be5-896c-919b08849182",
+                "instanceIdentifier" : "dff19e47-85dc-34e1-bdeb-0d4f533e1785",
+                "name" : "Transform Document - Update Category URL Fallback From Database",
+                "type" : "PROCESSOR"
+              },
+              "zIndex" : 0
+            }, {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "",
+                "groupId" : "da09e4c7-02f1-3593-a2c7-35edf9e79388",
+                "id" : "688b384b-7561-3967-98c5-7e859a2638dd",
+                "instanceIdentifier" : "9fdbce33-7a8e-3f70-97cd-1ab2df35d706",
+                "name" : "OUTPUT",
+                "type" : "OUTPUT_PORT"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "da09e4c7-02f1-3593-a2c7-35edf9e79388",
+              "identifier" : "7b151c2d-0d1e-3764-8522-e028717f705c",
+              "instanceIdentifier" : "20aba992-4fab-3011-d9de-86f350234d63",
+              "labelIndex" : 1,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "partitioningAttribute" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "success" ],
+              "source" : {
+                "comments" : "",
+                "groupId" : "da09e4c7-02f1-3593-a2c7-35edf9e79388",
+                "id" : "2b146598-bd1c-3be5-896c-919b08849182",
+                "instanceIdentifier" : "dff19e47-85dc-34e1-bdeb-0d4f533e1785",
+                "name" : "Transform Document - Update Category URL Fallback From Database",
+                "type" : "PROCESSOR"
+              },
+              "zIndex" : 0
+            } ],
+            "controllerServices" : [ ],
+            "defaultBackPressureDataSizeThreshold" : "1 GB",
+            "defaultBackPressureObjectThreshold" : 10000,
+            "defaultFlowFileExpiration" : "0 sec",
+            "flowFileConcurrency" : "UNBOUNDED",
+            "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+            "funnels" : [ ],
+            "groupIdentifier" : "72a7782b-2acc-319d-abb6-41fdcfc5a77e",
+            "identifier" : "da09e4c7-02f1-3593-a2c7-35edf9e79388",
+            "inputPorts" : [ {
+              "allowRemoteAccess" : false,
+              "comments" : "",
+              "componentType" : "INPUT_PORT",
+              "concurrentlySchedulableTaskCount" : 1,
+              "groupIdentifier" : "da09e4c7-02f1-3593-a2c7-35edf9e79388",
+              "identifier" : "41c792bf-410e-3068-8424-c653c83ba4ae",
+              "instanceIdentifier" : "df9768ed-190a-3ab2-1466-f91f5772958a",
+              "name" : "INPUT",
+              "position" : {
+                "x" : 144.0,
+                "y" : 168.0
+              },
+              "scheduledState" : "ENABLED",
+              "type" : "INPUT_PORT"
+            } ],
+            "instanceIdentifier" : "fa97f9b7-cfae-345b-652c-77946463a1e5",
+            "labels" : [ {
+              "componentType" : "LABEL",
+              "groupIdentifier" : "da09e4c7-02f1-3593-a2c7-35edf9e79388",
+              "height" : 376.0,
+              "identifier" : "166c3bed-6501-3681-ade7-3c52c9493f99",
+              "instanceIdentifier" : "73e59348-6be2-3a2f-4819-56bd226aca7c",
+              "label" : "Update Category URL Fallback from Database",
+              "position" : {
+                "x" : 256.0,
+                "y" : 32.0
+              },
+              "style" : {
+                "background-color" : "#cceeff",
+                "font-size" : "20px"
+              },
+              "width" : 1432.0,
+              "zIndex" : 0
+            } ],
+            "name" : "Update Category URL Fallback from Database",
+            "outputPorts" : [ {
+              "allowRemoteAccess" : false,
+              "comments" : "",
+              "componentType" : "OUTPUT_PORT",
+              "concurrentlySchedulableTaskCount" : 1,
+              "groupIdentifier" : "da09e4c7-02f1-3593-a2c7-35edf9e79388",
+              "identifier" : "688b384b-7561-3967-98c5-7e859a2638dd",
+              "instanceIdentifier" : "9fdbce33-7a8e-3f70-97cd-1ab2df35d706",
+              "name" : "OUTPUT",
+              "position" : {
+                "x" : 1576.0,
+                "y" : 168.0
+              },
+              "scheduledState" : "ENABLED",
+              "type" : "OUTPUT_PORT"
+            }, {
+              "allowRemoteAccess" : false,
+              "comments" : "",
+              "componentType" : "OUTPUT_PORT",
+              "concurrentlySchedulableTaskCount" : 1,
+              "groupIdentifier" : "da09e4c7-02f1-3593-a2c7-35edf9e79388",
+              "identifier" : "fcda9a5f-7b9b-3abe-962d-bed01d06d61e",
+              "instanceIdentifier" : "252d0d1e-205b-378a-2a55-8fea28e638a8",
+              "name" : "ERROR",
+              "position" : {
+                "x" : 848.0,
+                "y" : 384.0
+              },
+              "scheduledState" : "ENABLED",
+              "type" : "OUTPUT_PORT"
+            } ],
+            "position" : {
+              "x" : 192.0,
+              "y" : 416.0
+            },
+            "processGroups" : [ ],
+            "processors" : [ {
+              "autoTerminatedRelationships" : [ "empty" ],
+              "backoffMechanism" : "PENALIZE_FLOWFILE",
+              "bulletinLevel" : "WARN",
+              "bundle" : {
+                "artifact" : "commerce-search-processors-nar",
+                "group" : "com.hcl.commerce",
+                "version" : "9.1.16.0"
+              },
+              "comments" : "",
+              "componentType" : "PROCESSOR",
+              "concurrentlySchedulableTaskCount" : 1,
+              "executionNode" : "ALL",
+              "groupIdentifier" : "da09e4c7-02f1-3593-a2c7-35edf9e79388",
+              "identifier" : "2b146598-bd1c-3be5-896c-919b08849182",
+              "instanceIdentifier" : "dff19e47-85dc-34e1-bdeb-0d4f533e1785",
+              "maxBackoffPeriod" : "10 mins",
+              "name" : "Transform Document - Update Category URL Fallback From Database",
+              "penaltyDuration" : "0 sec",
+              "position" : {
+                "x" : 792.0,
+                "y" : 128.0
+              },
+              "properties" : {
+                "Catalog Service" : "fdc215f9-c228-32b6-a12b-e127430161eb"
+              },
+              "propertyDescriptors" : {
+                "Catalog Service" : {
+                  "displayName" : "Catalog Service",
+                  "identifiesControllerService" : true,
+                  "name" : "Catalog Service",
+                  "sensitive" : false
+                }
+              },
+              "retriedRelationships" : [ ],
+              "retryCount" : 10,
+              "runDurationMillis" : 0,
+              "scheduledState" : "ENABLED",
+              "schedulingPeriod" : "0 sec",
+              "schedulingStrategy" : "TIMER_DRIVEN",
+              "style" : {
+                "background-color" : "#0000ff"
+              },
+              "type" : "com.hcl.software.data.ingest.url.processors.UpdateCategoryURLFallbackFromDatabase",
+              "yieldDuration" : "1 sec"
+            } ],
+            "remoteProcessGroups" : [ ],
+            "variables" : { }
+          }, {
+            "comments" : "",
+            "componentType" : "PROCESS_GROUP",
+            "connections" : [ {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "",
+                "groupId" : "6a664283-2602-36c8-97ad-2fdd227bc31f",
+                "id" : "2edeb55c-efd4-31b4-b181-b04e665cae12",
+                "instanceIdentifier" : "5dd13cfb-1346-37c9-9abe-ad78b4792c17",
+                "name" : "Update offset for next iteration",
+                "type" : "PROCESSOR"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "6a664283-2602-36c8-97ad-2fdd227bc31f",
+              "identifier" : "1e1540da-c37f-30b0-9255-3b94f48da313",
+              "instanceIdentifier" : "38c67bcb-6be4-3046-f588-6feea2aecf0b",
+              "labelIndex" : 1,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "partitioningAttribute" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "success" ],
+              "source" : {
+                "comments" : "",
+                "groupId" : "6a664283-2602-36c8-97ad-2fdd227bc31f",
+                "id" : "6b04043e-61aa-3c83-b5a6-c2aa441d84e6",
+                "instanceIdentifier" : "3144b9da-6b1a-37fe-3c30-7797f031395d",
+                "name" : "Clear payload",
+                "type" : "PROCESSOR"
+              },
+              "zIndex" : 0
+            }, {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "",
+                "groupId" : "6a664283-2602-36c8-97ad-2fdd227bc31f",
+                "id" : "60d12313-facf-3e63-ad3a-1f4b622d0b47",
+                "instanceIdentifier" : "7d5d2e56-abc7-3760-f49f-bad0644655e9",
+                "name" : "SUCCESS",
+                "type" : "OUTPUT_PORT"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "6a664283-2602-36c8-97ad-2fdd227bc31f",
+              "identifier" : "2091ba5f-6074-3528-bf00-291babe6ffa2",
+              "instanceIdentifier" : "31990a1f-e7c7-35a5-5faf-2ed349c16a28",
+              "labelIndex" : 1,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "partitioningAttribute" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "success" ],
+              "source" : {
+                "comments" : "",
+                "groupId" : "6a664283-2602-36c8-97ad-2fdd227bc31f",
+                "id" : "3090aae7-20c7-3cb6-956b-6e206fd3ee08",
+                "instanceIdentifier" : "682b6cb5-e7a6-385f-fa28-6f94f3f07b0f",
+                "name" : "Analyze SQL Response",
+                "type" : "PROCESSOR"
+              },
+              "zIndex" : 0
+            }, {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "\t\tSELECT S.TOKENVALUE, SD.URLKEYWORD FROM SEOURL S, SEOURLKEYWORD SD \n\t\t\twhere S.SEOURL_ID IN(SELECT A.SEOURL_ID FROM SEOURL A\n\t           LEFT OUTER JOIN SEOURLKEYWORD B ON (A.SEOURL_ID=B.SEOURL_ID AND B.LANGUAGE_ID=${param.langId}\n\t                                                AND B.STOREENT_ID IN\n\t                                                    (SELECT RELATEDSTORE_ID FROM STOREREL E WHERE E.STORE_ID=${param.storeId} AND E.STRELTYP_ID=-4))\n\t\t\t   LEFT OUTER JOIN SEOREDIRECT C ON B.SEOURLKEYWORD_ID=C.SEOURLKWD_ID_ORIG\n\t\t\t   LEFT OUTER JOIN SEOURLKEYWORD D ON C.SEOURLKWD_ID_NEW=D.SEOURLKEYWORD_ID\n\t\t\t   LEFT OUTER JOIN LANGUAGE L ON B.LANGUAGE_ID = L.LANGUAGE_ID\n\t\t\t   LEFT OUTER JOIN (\n\t\t\t\t\tSELECT COALESCE(S.DISPLAYNAME, SD.DISPLAYNAME) DISPLAYNAME,\n\t\t\t\t\t       COALESCE(S.DESCRIPTION, SD.DESCRIPTION) DESCRIPTION, \n\t\t\t\t\t       CG.IDENTIFIER, CD.CATGROUP_ID, CD.NAME, CD.KEYWORD, CD.SHORTDESCRIPTION,\n\t\t\t\t\t       E.SEOPAGEDEF_ID SITE_SEOPAGEDEF_ID,\n\t\t\t\t\t       E.PAGENAME SITE_PAGENAME,\n\t\t\t\t\t       E.TITLE SITE_TITLE,\n\t\t\t\t\t       E.META_DESC SITE_META_DESC,\n\t\t\t\t\t       E.META_KEYWORD SITE_META_KEYWORD,\n\t\t\t\t\t       E.IMAGE_ALT_DESC SITE_IMAGE_ALT_DESC,\n\t\t\t\t\t       E.OBJECT_ID SITE_OBJECT_ID,\n\t\t\t\t\t       E.STOREENT_ID SITE_STOREENT_ID,\n\t\t\t\t\t       F.SEOPAGEDEF_ID OVERRIDE_SEOPAGEDEF_ID,\n\t\t\t\t\t       F.PAGENAME OVERRIDE_PAGENAME,\n\t\t\t\t\t       F.TITLE OVERRIDE_TITLE,\n\t\t\t\t\t       F.META_DESC OVERRIDE_META_DESC,\n\t\t\t\t\t       F.META_KEYWORD OVERRIDE_META_KEYWORD,\n\t\t\t\t\t       F.IMAGE_ALT_DESC OVERRIDE_IMAGE_ALT_DESC,\n\t\t\t\t\t       F.OBJECT_ID OVERRIDE_OBJECT_ID,\n\t\t\t\t\t       F.STOREENT_ID OVERRIDE_STOREENT_ID\n\t\t\t\t\t  FROM STOREENTDS S\n\t\t\t\t\t       INNER JOIN STORE ST ON S.STOREENT_ID=ST.STORE_ID\n\t\t\t\t\t       INNER JOIN CATGRPDESC CD ON S.LANGUAGE_ID=CD.LANGUAGE_ID ${extCatgroupAndSQL1b}\n\t\t\t\t\t\t   INNER JOIN CATGROUP CG ON CG.CATGROUP_ID=CD.CATGROUP_ID\n\t\t\t\t\t\t   ${TI_DELTA_CG_URL_JOIN_QUERY}\n                           ${X_CUSTOM_CG_URL_JOIN_QUERY}\n\t\t\t\t\t       INNER JOIN STOREENTDS SD ON ST.STORE_ID=SD.STOREENT_ID\n\t\t\t\t\t       LEFT OUTER JOIN (\n\t\t\t\t\t       \t\tSELECT SC.OBJECT_ID OBJECT_ID,\n\t\t\t\t\t       \t\t\t   SA.SEOPAGEDEF_ID SEOPAGEDEF_ID,\n\t\t\t\t\t       \t\t\t   SA.PAGENAME PAGENAME,\n\t\t\t\t\t       \t\t\t   SB.TITLE TITLE,\n\t\t\t\t\t       \t\t\t   SB.META_DESC META_DESC,\n\t\t\t\t\t       \t\t\t   SB.META_KEYWORD META_KEYWORD,\n\t\t\t\t\t       \t\t\t   SB.IMAGE_ALT_DESC IMAGE_ALT_DESC,\n\t\t\t\t\t       \t\t\t   SA.STOREENT_ID STOREENT_ID\n\t\t\t\t\t              FROM SEOPAGEDEF SA, SEOPAGEDEFDESC SB, SEOPAGEDEFOVR SC\n\t\t\t\t\t \t\t\t WHERE SA.SEOPAGEDEF_ID=SB.SEOPAGEDEF_ID AND SA.SEOPAGEDEF_ID=SC.SEOPAGEDEF_ID\n\t\t\t\t\t   \t\t\t   AND SA.STOREENT_ID IN (SELECT RELATEDSTORE_ID FROM STOREREL\n\t\t\t\t\t   \t\t\t   \t\t\t\t\t      WHERE STORE_ID=${param.storeId} AND STRELTYP_ID=-4)\n\t\t\t\t\t   \t\t\t   AND SB.LANGUAGE_ID=${param.langId}\n\t\t\t\t\t   \t\t\t   AND SC.OBJECTTYPE = 'CatalogGroup') E ON E.OBJECT_ID = 0\n\t\t\t\t\t       LEFT OUTER JOIN (\n\t\t\t\t\t       \t\tSELECT SC.OBJECT_ID OBJECT_ID,\n\t\t\t\t\t       \t\t\t   SA.SEOPAGEDEF_ID SEOPAGEDEF_ID,\n\t\t\t\t\t       \t\t\t   SA.PAGENAME PAGENAME,\n\t\t\t\t\t       \t\t\t   SB.TITLE TITLE,\n\t\t\t\t\t       \t\t\t   SB.META_DESC META_DESC,\n\t\t\t\t\t       \t\t\t   SB.META_KEYWORD META_KEYWORD,\n\t\t\t\t\t       \t\t\t   SB.IMAGE_ALT_DESC IMAGE_ALT_DESC,\n\t\t\t\t\t       \t\t\t   SA.STOREENT_ID STOREENT_ID\n\t\t\t\t\t              FROM SEOPAGEDEF SA, SEOPAGEDEFDESC SB, SEOPAGEDEFOVR SC\n\t\t\t\t\t \t\t\t WHERE SA.SEOPAGEDEF_ID=SB.SEOPAGEDEF_ID AND SA.SEOPAGEDEF_ID=SC.SEOPAGEDEF_ID\n\t\t\t\t\t   \t\t\t   AND SA.STOREENT_ID IN (SELECT RELATEDSTORE_ID FROM STOREREL\n\t\t\t\t\t   \t\t\t   \t\t\t\t\t      WHERE STORE_ID=${param.storeId} AND STRELTYP_ID=-4)\n\t\t\t\t\t   \t\t\t   AND SB.LANGUAGE_ID=${param.langId}\n\t\t\t\t\t   \t\t\t   AND SC.OBJECTTYPE = 'CatalogGroup') F ON F.OBJECT_ID = CD.CATGROUP_ID\n\t\t\t\t\t WHERE ST.STORE_ID=${param.storeId}\n\t\t\t\t\t   AND (( S.STOREENT_ID=ST.STORE_ID AND S.LANGUAGE_ID=${param.langId} )\n\t\t\t\t\t    OR  ( SD.LANGUAGE_ID=ST.LANGUAGE_ID ))\n\t\t\t   ) P ON P.CATGROUP_ID IN (\n\t\t\t\t SELECT C.CATGROUP_ID\n\t\t\t\t   FROM CATGRPREL R, CATGROUP C\n\t\t\t\t  WHERE R.CATALOG_ID = ${param.catalogId}\n\t\t\t\t    AND R.CATALOG_ID IN (SELECT CATALOG_ID FROM STORECAT WHERE STOREENT_ID IN\n\t\t\t\t        (SELECT RELATEDSTORE_ID FROM STOREREL WHERE STATE = 1 AND STRELTYP_ID = -4 AND STORE_ID = ${param.storeId}))\n\t\t\t\t    AND R.CATGROUP_ID_CHILD = C.CATGROUP_ID AND C.MARKFORDELETE = 0\n\t\t\t\t  UNION\n\t\t\t\t SELECT C.CATGROUP_ID\n\t\t\t\t   FROM CATTOGRP R, CATGROUP C\n\t\t\t\t  WHERE R.CATALOG_ID = ${param.catalogId}\n\t\t\t\t    AND R.CATALOG_ID IN (SELECT CATALOG_ID FROM STORECAT WHERE STOREENT_ID IN\n\t\t\t\t        (SELECT RELATEDSTORE_ID FROM STOREREL WHERE STATE = 1 AND STRELTYP_ID = -4 AND STORE_ID = ${param.storeId}))\n\t\t\t\t    AND R.CATGROUP_ID = C.CATGROUP_ID AND C.MARKFORDELETE = 0)\n\t\t WHERE A.TOKENNAME IN ('CategoryToken')\n\t\t   AND A.TOKENVALUE = P.CATGROUP_ID AND B.SEOURLKEYWORD_ID IS NULL) \n\t\t   AND S.SEOURL_ID = SD.SEOURL_ID AND SD.LANGUAGE_ID = ${default.language} ORDER BY S.SEOURL_ID\n\t${paging.prefix} ${param.offset} ${paging.link} ${param.pageSize} ${paging.suffix}",
+                "groupId" : "6a664283-2602-36c8-97ad-2fdd227bc31f",
+                "id" : "dd6b1563-8642-3a0c-91e5-8b99f10ecfc3",
+                "instanceIdentifier" : "bf166040-9590-3f4c-ae98-be355dd44c25",
+                "name" : "Update Category URL Fallback SQL",
+                "type" : "PROCESSOR"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "6a664283-2602-36c8-97ad-2fdd227bc31f",
+              "identifier" : "c59965b7-5ea6-35de-b410-a571b91e475f",
+              "instanceIdentifier" : "f41ececa-496c-32c2-f50f-ecb2d90df5c4",
+              "labelIndex" : 1,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "partitioningAttribute" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "success" ],
+              "source" : {
+                "comments" : "",
+                "groupId" : "6a664283-2602-36c8-97ad-2fdd227bc31f",
+                "id" : "2edeb55c-efd4-31b4-b181-b04e665cae12",
+                "instanceIdentifier" : "5dd13cfb-1346-37c9-9abe-ad78b4792c17",
+                "name" : "Update offset for next iteration",
+                "type" : "PROCESSOR"
+              },
+              "zIndex" : 0
+            }, {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "",
+                "groupId" : "6a664283-2602-36c8-97ad-2fdd227bc31f",
+                "id" : "6b531e1c-b384-36bc-b887-c62adefc9172",
+                "instanceIdentifier" : "76616aa5-9da6-385c-2998-b6dda27a4355",
+                "name" : "Define scroll offset and page size",
+                "type" : "PROCESSOR"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "6a664283-2602-36c8-97ad-2fdd227bc31f",
+              "identifier" : "d5bec6ad-6a2d-3c09-a5c4-86c654a3d05b",
+              "instanceIdentifier" : "7bed5267-731b-35fe-d6c8-d9cf62a40776",
+              "labelIndex" : 1,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "partitioningAttribute" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "" ],
+              "source" : {
+                "comments" : "",
+                "groupId" : "6a664283-2602-36c8-97ad-2fdd227bc31f",
+                "id" : "ccb8119d-1567-3c29-a401-6874f8072c84",
+                "instanceIdentifier" : "135424bb-b3d7-3cfc-be0c-cd05a688a766",
+                "name" : "INPUT",
+                "type" : "INPUT_PORT"
+              },
+              "zIndex" : 0
+            }, {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "",
+                "groupId" : "6a664283-2602-36c8-97ad-2fdd227bc31f",
+                "id" : "2d67f3cd-1914-3f71-895c-dabe6c8a1507",
+                "instanceIdentifier" : "f9c17f9a-7ca4-3b8e-f0db-25db8add75b6",
+                "name" : "Funnel",
+                "type" : "FUNNEL"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "6a664283-2602-36c8-97ad-2fdd227bc31f",
+              "identifier" : "40d682ec-ba98-3bd4-9326-424f533e5fab",
+              "instanceIdentifier" : "c2cc3919-033f-3550-edc2-6650f6d81df0",
+              "labelIndex" : 1,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "partitioningAttribute" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "failure" ],
+              "source" : {
+                "comments" : "\t\tSELECT S.TOKENVALUE, SD.URLKEYWORD FROM SEOURL S, SEOURLKEYWORD SD \n\t\t\twhere S.SEOURL_ID IN(SELECT A.SEOURL_ID FROM SEOURL A\n\t           LEFT OUTER JOIN SEOURLKEYWORD B ON (A.SEOURL_ID=B.SEOURL_ID AND B.LANGUAGE_ID=${param.langId}\n\t                                                AND B.STOREENT_ID IN\n\t                                                    (SELECT RELATEDSTORE_ID FROM STOREREL E WHERE E.STORE_ID=${param.storeId} AND E.STRELTYP_ID=-4))\n\t\t\t   LEFT OUTER JOIN SEOREDIRECT C ON B.SEOURLKEYWORD_ID=C.SEOURLKWD_ID_ORIG\n\t\t\t   LEFT OUTER JOIN SEOURLKEYWORD D ON C.SEOURLKWD_ID_NEW=D.SEOURLKEYWORD_ID\n\t\t\t   LEFT OUTER JOIN LANGUAGE L ON B.LANGUAGE_ID = L.LANGUAGE_ID\n\t\t\t   LEFT OUTER JOIN (\n\t\t\t\t\tSELECT COALESCE(S.DISPLAYNAME, SD.DISPLAYNAME) DISPLAYNAME,\n\t\t\t\t\t       COALESCE(S.DESCRIPTION, SD.DESCRIPTION) DESCRIPTION, \n\t\t\t\t\t       CG.IDENTIFIER, CD.CATGROUP_ID, CD.NAME, CD.KEYWORD, CD.SHORTDESCRIPTION,\n\t\t\t\t\t       E.SEOPAGEDEF_ID SITE_SEOPAGEDEF_ID,\n\t\t\t\t\t       E.PAGENAME SITE_PAGENAME,\n\t\t\t\t\t       E.TITLE SITE_TITLE,\n\t\t\t\t\t       E.META_DESC SITE_META_DESC,\n\t\t\t\t\t       E.META_KEYWORD SITE_META_KEYWORD,\n\t\t\t\t\t       E.IMAGE_ALT_DESC SITE_IMAGE_ALT_DESC,\n\t\t\t\t\t       E.OBJECT_ID SITE_OBJECT_ID,\n\t\t\t\t\t       E.STOREENT_ID SITE_STOREENT_ID,\n\t\t\t\t\t       F.SEOPAGEDEF_ID OVERRIDE_SEOPAGEDEF_ID,\n\t\t\t\t\t       F.PAGENAME OVERRIDE_PAGENAME,\n\t\t\t\t\t       F.TITLE OVERRIDE_TITLE,\n\t\t\t\t\t       F.META_DESC OVERRIDE_META_DESC,\n\t\t\t\t\t       F.META_KEYWORD OVERRIDE_META_KEYWORD,\n\t\t\t\t\t       F.IMAGE_ALT_DESC OVERRIDE_IMAGE_ALT_DESC,\n\t\t\t\t\t       F.OBJECT_ID OVERRIDE_OBJECT_ID,\n\t\t\t\t\t       F.STOREENT_ID OVERRIDE_STOREENT_ID\n\t\t\t\t\t  FROM STOREENTDS S\n\t\t\t\t\t       INNER JOIN STORE ST ON S.STOREENT_ID=ST.STORE_ID\n\t\t\t\t\t       INNER JOIN CATGRPDESC CD ON S.LANGUAGE_ID=CD.LANGUAGE_ID ${extCatgroupAndSQL1b}\n\t\t\t\t\t\t   INNER JOIN CATGROUP CG ON CG.CATGROUP_ID=CD.CATGROUP_ID\n\t\t\t\t\t\t   ${TI_DELTA_CG_URL_JOIN_QUERY}\n                           ${X_CUSTOM_CG_URL_JOIN_QUERY}\n\t\t\t\t\t       INNER JOIN STOREENTDS SD ON ST.STORE_ID=SD.STOREENT_ID\n\t\t\t\t\t       LEFT OUTER JOIN (\n\t\t\t\t\t       \t\tSELECT SC.OBJECT_ID OBJECT_ID,\n\t\t\t\t\t       \t\t\t   SA.SEOPAGEDEF_ID SEOPAGEDEF_ID,\n\t\t\t\t\t       \t\t\t   SA.PAGENAME PAGENAME,\n\t\t\t\t\t       \t\t\t   SB.TITLE TITLE,\n\t\t\t\t\t       \t\t\t   SB.META_DESC META_DESC,\n\t\t\t\t\t       \t\t\t   SB.META_KEYWORD META_KEYWORD,\n\t\t\t\t\t       \t\t\t   SB.IMAGE_ALT_DESC IMAGE_ALT_DESC,\n\t\t\t\t\t       \t\t\t   SA.STOREENT_ID STOREENT_ID\n\t\t\t\t\t              FROM SEOPAGEDEF SA, SEOPAGEDEFDESC SB, SEOPAGEDEFOVR SC\n\t\t\t\t\t \t\t\t WHERE SA.SEOPAGEDEF_ID=SB.SEOPAGEDEF_ID AND SA.SEOPAGEDEF_ID=SC.SEOPAGEDEF_ID\n\t\t\t\t\t   \t\t\t   AND SA.STOREENT_ID IN (SELECT RELATEDSTORE_ID FROM STOREREL\n\t\t\t\t\t   \t\t\t   \t\t\t\t\t      WHERE STORE_ID=${param.storeId} AND STRELTYP_ID=-4)\n\t\t\t\t\t   \t\t\t   AND SB.LANGUAGE_ID=${param.langId}\n\t\t\t\t\t   \t\t\t   AND SC.OBJECTTYPE = 'CatalogGroup') E ON E.OBJECT_ID = 0\n\t\t\t\t\t       LEFT OUTER JOIN (\n\t\t\t\t\t       \t\tSELECT SC.OBJECT_ID OBJECT_ID,\n\t\t\t\t\t       \t\t\t   SA.SEOPAGEDEF_ID SEOPAGEDEF_ID,\n\t\t\t\t\t       \t\t\t   SA.PAGENAME PAGENAME,\n\t\t\t\t\t       \t\t\t   SB.TITLE TITLE,\n\t\t\t\t\t       \t\t\t   SB.META_DESC META_DESC,\n\t\t\t\t\t       \t\t\t   SB.META_KEYWORD META_KEYWORD,\n\t\t\t\t\t       \t\t\t   SB.IMAGE_ALT_DESC IMAGE_ALT_DESC,\n\t\t\t\t\t       \t\t\t   SA.STOREENT_ID STOREENT_ID\n\t\t\t\t\t              FROM SEOPAGEDEF SA, SEOPAGEDEFDESC SB, SEOPAGEDEFOVR SC\n\t\t\t\t\t \t\t\t WHERE SA.SEOPAGEDEF_ID=SB.SEOPAGEDEF_ID AND SA.SEOPAGEDEF_ID=SC.SEOPAGEDEF_ID\n\t\t\t\t\t   \t\t\t   AND SA.STOREENT_ID IN (SELECT RELATEDSTORE_ID FROM STOREREL\n\t\t\t\t\t   \t\t\t   \t\t\t\t\t      WHERE STORE_ID=${param.storeId} AND STRELTYP_ID=-4)\n\t\t\t\t\t   \t\t\t   AND SB.LANGUAGE_ID=${param.langId}\n\t\t\t\t\t   \t\t\t   AND SC.OBJECTTYPE = 'CatalogGroup') F ON F.OBJECT_ID = CD.CATGROUP_ID\n\t\t\t\t\t WHERE ST.STORE_ID=${param.storeId}\n\t\t\t\t\t   AND (( S.STOREENT_ID=ST.STORE_ID AND S.LANGUAGE_ID=${param.langId} )\n\t\t\t\t\t    OR  ( SD.LANGUAGE_ID=ST.LANGUAGE_ID ))\n\t\t\t   ) P ON P.CATGROUP_ID IN (\n\t\t\t\t SELECT C.CATGROUP_ID\n\t\t\t\t   FROM CATGRPREL R, CATGROUP C\n\t\t\t\t  WHERE R.CATALOG_ID = ${param.catalogId}\n\t\t\t\t    AND R.CATALOG_ID IN (SELECT CATALOG_ID FROM STORECAT WHERE STOREENT_ID IN\n\t\t\t\t        (SELECT RELATEDSTORE_ID FROM STOREREL WHERE STATE = 1 AND STRELTYP_ID = -4 AND STORE_ID = ${param.storeId}))\n\t\t\t\t    AND R.CATGROUP_ID_CHILD = C.CATGROUP_ID AND C.MARKFORDELETE = 0\n\t\t\t\t  UNION\n\t\t\t\t SELECT C.CATGROUP_ID\n\t\t\t\t   FROM CATTOGRP R, CATGROUP C\n\t\t\t\t  WHERE R.CATALOG_ID = ${param.catalogId}\n\t\t\t\t    AND R.CATALOG_ID IN (SELECT CATALOG_ID FROM STORECAT WHERE STOREENT_ID IN\n\t\t\t\t        (SELECT RELATEDSTORE_ID FROM STOREREL WHERE STATE = 1 AND STRELTYP_ID = -4 AND STORE_ID = ${param.storeId}))\n\t\t\t\t    AND R.CATGROUP_ID = C.CATGROUP_ID AND C.MARKFORDELETE = 0)\n\t\t WHERE A.TOKENNAME IN ('CategoryToken')\n\t\t   AND A.TOKENVALUE = P.CATGROUP_ID AND B.SEOURLKEYWORD_ID IS NULL) \n\t\t   AND S.SEOURL_ID = SD.SEOURL_ID AND SD.LANGUAGE_ID = ${default.language} ORDER BY S.SEOURL_ID\n\t${paging.prefix} ${param.offset} ${paging.link} ${param.pageSize} ${paging.suffix}",
+                "groupId" : "6a664283-2602-36c8-97ad-2fdd227bc31f",
+                "id" : "dd6b1563-8642-3a0c-91e5-8b99f10ecfc3",
+                "instanceIdentifier" : "bf166040-9590-3f4c-ae98-be355dd44c25",
+                "name" : "Update Category URL Fallback SQL",
+                "type" : "PROCESSOR"
+              },
+              "zIndex" : 0
+            }, {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "",
+                "groupId" : "6a664283-2602-36c8-97ad-2fdd227bc31f",
+                "id" : "60d90054-f784-371f-ba79-5ed3d93162b6",
+                "instanceIdentifier" : "78e1b1e8-1cda-377d-c0de-bbc69af5b082",
+                "name" : "EMPTY",
+                "type" : "OUTPUT_PORT"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "6a664283-2602-36c8-97ad-2fdd227bc31f",
+              "identifier" : "4f6859f8-ea92-3147-a5eb-341ae6bdcc60",
+              "instanceIdentifier" : "88821177-8a60-30fe-9d3b-6290c99bbdd2",
+              "labelIndex" : 1,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "partitioningAttribute" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "empty" ],
+              "source" : {
+                "comments" : "",
+                "groupId" : "6a664283-2602-36c8-97ad-2fdd227bc31f",
+                "id" : "3090aae7-20c7-3cb6-956b-6e206fd3ee08",
+                "instanceIdentifier" : "682b6cb5-e7a6-385f-fa28-6f94f3f07b0f",
+                "name" : "Analyze SQL Response",
+                "type" : "PROCESSOR"
+              },
+              "zIndex" : 0
+            }, {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "",
+                "groupId" : "6a664283-2602-36c8-97ad-2fdd227bc31f",
+                "id" : "32da32ed-d844-38a8-a5ff-f1eee220754f",
+                "instanceIdentifier" : "dcd8d11d-a510-3b77-a913-493eec1e722f",
+                "name" : "Funnel",
+                "type" : "FUNNEL"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "6a664283-2602-36c8-97ad-2fdd227bc31f",
+              "identifier" : "25d5a7dd-27d5-3001-b303-e9d116727b1c",
+              "instanceIdentifier" : "449ee8da-c101-3f94-bed1-d41678909b83",
+              "labelIndex" : 1,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "partitioningAttribute" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "" ],
+              "source" : {
+                "comments" : "",
+                "groupId" : "6a664283-2602-36c8-97ad-2fdd227bc31f",
+                "id" : "2d67f3cd-1914-3f71-895c-dabe6c8a1507",
+                "instanceIdentifier" : "f9c17f9a-7ca4-3b8e-f0db-25db8add75b6",
+                "name" : "Funnel",
+                "type" : "FUNNEL"
+              },
+              "zIndex" : 0
+            }, {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "",
+                "groupId" : "6a664283-2602-36c8-97ad-2fdd227bc31f",
+                "id" : "32da32ed-d844-38a8-a5ff-f1eee220754f",
+                "instanceIdentifier" : "dcd8d11d-a510-3b77-a913-493eec1e722f",
+                "name" : "Funnel",
+                "type" : "FUNNEL"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "6a664283-2602-36c8-97ad-2fdd227bc31f",
+              "identifier" : "eed12316-07bf-3549-a7ab-ec97df3fbeb1",
+              "instanceIdentifier" : "45f61dc5-31f2-37b7-da3b-e4cd46cb8d34",
+              "labelIndex" : 1,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "partitioningAttribute" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "failure" ],
+              "source" : {
+                "comments" : "",
+                "groupId" : "6a664283-2602-36c8-97ad-2fdd227bc31f",
+                "id" : "3090aae7-20c7-3cb6-956b-6e206fd3ee08",
+                "instanceIdentifier" : "682b6cb5-e7a6-385f-fa28-6f94f3f07b0f",
+                "name" : "Analyze SQL Response",
+                "type" : "PROCESSOR"
+              },
+              "zIndex" : 0
+            }, {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "",
+                "groupId" : "6a664283-2602-36c8-97ad-2fdd227bc31f",
+                "id" : "3090aae7-20c7-3cb6-956b-6e206fd3ee08",
+                "instanceIdentifier" : "682b6cb5-e7a6-385f-fa28-6f94f3f07b0f",
+                "name" : "Analyze SQL Response",
+                "type" : "PROCESSOR"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "6a664283-2602-36c8-97ad-2fdd227bc31f",
+              "identifier" : "1dbe429b-28c3-3d9a-bbd1-8b3e4b97c930",
+              "instanceIdentifier" : "d01c6ef2-a6d8-39d3-2d58-7ee9bf67fb5f",
+              "labelIndex" : 1,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "partitioningAttribute" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "success", "failure" ],
+              "source" : {
+                "comments" : "",
+                "groupId" : "6a664283-2602-36c8-97ad-2fdd227bc31f",
+                "id" : "b5b436a2-676c-31b8-b5cb-74d0ef478110",
+                "instanceIdentifier" : "b46ad6be-24db-30f9-d278-ae377bb5656a",
+                "name" : "Execute SQL - Update Category URL Fallback",
+                "type" : "PROCESSOR"
+              },
+              "zIndex" : 0
+            }, {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "",
+                "groupId" : "6a664283-2602-36c8-97ad-2fdd227bc31f",
+                "id" : "1a85c2ee-3035-3287-b748-36edf2c0a93f",
+                "instanceIdentifier" : "e8916ee6-1705-3eac-bb77-459ad6421077",
+                "name" : "ERROR",
+                "type" : "OUTPUT_PORT"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "6a664283-2602-36c8-97ad-2fdd227bc31f",
+              "identifier" : "0b72317a-f855-3f6e-9e4e-d59754bf2157",
+              "instanceIdentifier" : "fa574131-2aa8-31e5-c796-c8f664a27ebb",
+              "labelIndex" : 1,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "partitioningAttribute" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "" ],
+              "source" : {
+                "comments" : "",
+                "groupId" : "6a664283-2602-36c8-97ad-2fdd227bc31f",
+                "id" : "32da32ed-d844-38a8-a5ff-f1eee220754f",
+                "instanceIdentifier" : "dcd8d11d-a510-3b77-a913-493eec1e722f",
+                "name" : "Funnel",
+                "type" : "FUNNEL"
+              },
+              "zIndex" : 0
+            }, {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "",
+                "groupId" : "6a664283-2602-36c8-97ad-2fdd227bc31f",
+                "id" : "6b04043e-61aa-3c83-b5a6-c2aa441d84e6",
+                "instanceIdentifier" : "3144b9da-6b1a-37fe-3c30-7797f031395d",
+                "name" : "Clear payload",
+                "type" : "PROCESSOR"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "6a664283-2602-36c8-97ad-2fdd227bc31f",
+              "identifier" : "88ef816d-dca0-35bb-95ff-52b38cafc42b",
+              "instanceIdentifier" : "24093e4b-5788-3475-70c4-693802dd7563",
+              "labelIndex" : 1,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "partitioningAttribute" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "next" ],
+              "source" : {
+                "comments" : "",
+                "groupId" : "6a664283-2602-36c8-97ad-2fdd227bc31f",
+                "id" : "3090aae7-20c7-3cb6-956b-6e206fd3ee08",
+                "instanceIdentifier" : "682b6cb5-e7a6-385f-fa28-6f94f3f07b0f",
+                "name" : "Analyze SQL Response",
+                "type" : "PROCESSOR"
+              },
+              "zIndex" : 0
+            }, {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "",
+                "groupId" : "6a664283-2602-36c8-97ad-2fdd227bc31f",
+                "id" : "b5b436a2-676c-31b8-b5cb-74d0ef478110",
+                "instanceIdentifier" : "b46ad6be-24db-30f9-d278-ae377bb5656a",
+                "name" : "Execute SQL - Update Category URL Fallback",
+                "type" : "PROCESSOR"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "6a664283-2602-36c8-97ad-2fdd227bc31f",
+              "identifier" : "17290f3b-7b2e-37eb-99ac-40b677226f65",
+              "instanceIdentifier" : "82833dac-3d1f-3254-f0fa-ebeff4c2d495",
+              "labelIndex" : 1,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "partitioningAttribute" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "success" ],
+              "source" : {
+                "comments" : "\t\tSELECT S.TOKENVALUE, SD.URLKEYWORD FROM SEOURL S, SEOURLKEYWORD SD \n\t\t\twhere S.SEOURL_ID IN(SELECT A.SEOURL_ID FROM SEOURL A\n\t           LEFT OUTER JOIN SEOURLKEYWORD B ON (A.SEOURL_ID=B.SEOURL_ID AND B.LANGUAGE_ID=${param.langId}\n\t                                                AND B.STOREENT_ID IN\n\t                                                    (SELECT RELATEDSTORE_ID FROM STOREREL E WHERE E.STORE_ID=${param.storeId} AND E.STRELTYP_ID=-4))\n\t\t\t   LEFT OUTER JOIN SEOREDIRECT C ON B.SEOURLKEYWORD_ID=C.SEOURLKWD_ID_ORIG\n\t\t\t   LEFT OUTER JOIN SEOURLKEYWORD D ON C.SEOURLKWD_ID_NEW=D.SEOURLKEYWORD_ID\n\t\t\t   LEFT OUTER JOIN LANGUAGE L ON B.LANGUAGE_ID = L.LANGUAGE_ID\n\t\t\t   LEFT OUTER JOIN (\n\t\t\t\t\tSELECT COALESCE(S.DISPLAYNAME, SD.DISPLAYNAME) DISPLAYNAME,\n\t\t\t\t\t       COALESCE(S.DESCRIPTION, SD.DESCRIPTION) DESCRIPTION, \n\t\t\t\t\t       CG.IDENTIFIER, CD.CATGROUP_ID, CD.NAME, CD.KEYWORD, CD.SHORTDESCRIPTION,\n\t\t\t\t\t       E.SEOPAGEDEF_ID SITE_SEOPAGEDEF_ID,\n\t\t\t\t\t       E.PAGENAME SITE_PAGENAME,\n\t\t\t\t\t       E.TITLE SITE_TITLE,\n\t\t\t\t\t       E.META_DESC SITE_META_DESC,\n\t\t\t\t\t       E.META_KEYWORD SITE_META_KEYWORD,\n\t\t\t\t\t       E.IMAGE_ALT_DESC SITE_IMAGE_ALT_DESC,\n\t\t\t\t\t       E.OBJECT_ID SITE_OBJECT_ID,\n\t\t\t\t\t       E.STOREENT_ID SITE_STOREENT_ID,\n\t\t\t\t\t       F.SEOPAGEDEF_ID OVERRIDE_SEOPAGEDEF_ID,\n\t\t\t\t\t       F.PAGENAME OVERRIDE_PAGENAME,\n\t\t\t\t\t       F.TITLE OVERRIDE_TITLE,\n\t\t\t\t\t       F.META_DESC OVERRIDE_META_DESC,\n\t\t\t\t\t       F.META_KEYWORD OVERRIDE_META_KEYWORD,\n\t\t\t\t\t       F.IMAGE_ALT_DESC OVERRIDE_IMAGE_ALT_DESC,\n\t\t\t\t\t       F.OBJECT_ID OVERRIDE_OBJECT_ID,\n\t\t\t\t\t       F.STOREENT_ID OVERRIDE_STOREENT_ID\n\t\t\t\t\t  FROM STOREENTDS S\n\t\t\t\t\t       INNER JOIN STORE ST ON S.STOREENT_ID=ST.STORE_ID\n\t\t\t\t\t       INNER JOIN CATGRPDESC CD ON S.LANGUAGE_ID=CD.LANGUAGE_ID ${extCatgroupAndSQL1b}\n\t\t\t\t\t\t   INNER JOIN CATGROUP CG ON CG.CATGROUP_ID=CD.CATGROUP_ID\n\t\t\t\t\t\t   ${TI_DELTA_CG_URL_JOIN_QUERY}\n                           ${X_CUSTOM_CG_URL_JOIN_QUERY}\n\t\t\t\t\t       INNER JOIN STOREENTDS SD ON ST.STORE_ID=SD.STOREENT_ID\n\t\t\t\t\t       LEFT OUTER JOIN (\n\t\t\t\t\t       \t\tSELECT SC.OBJECT_ID OBJECT_ID,\n\t\t\t\t\t       \t\t\t   SA.SEOPAGEDEF_ID SEOPAGEDEF_ID,\n\t\t\t\t\t       \t\t\t   SA.PAGENAME PAGENAME,\n\t\t\t\t\t       \t\t\t   SB.TITLE TITLE,\n\t\t\t\t\t       \t\t\t   SB.META_DESC META_DESC,\n\t\t\t\t\t       \t\t\t   SB.META_KEYWORD META_KEYWORD,\n\t\t\t\t\t       \t\t\t   SB.IMAGE_ALT_DESC IMAGE_ALT_DESC,\n\t\t\t\t\t       \t\t\t   SA.STOREENT_ID STOREENT_ID\n\t\t\t\t\t              FROM SEOPAGEDEF SA, SEOPAGEDEFDESC SB, SEOPAGEDEFOVR SC\n\t\t\t\t\t \t\t\t WHERE SA.SEOPAGEDEF_ID=SB.SEOPAGEDEF_ID AND SA.SEOPAGEDEF_ID=SC.SEOPAGEDEF_ID\n\t\t\t\t\t   \t\t\t   AND SA.STOREENT_ID IN (SELECT RELATEDSTORE_ID FROM STOREREL\n\t\t\t\t\t   \t\t\t   \t\t\t\t\t      WHERE STORE_ID=${param.storeId} AND STRELTYP_ID=-4)\n\t\t\t\t\t   \t\t\t   AND SB.LANGUAGE_ID=${param.langId}\n\t\t\t\t\t   \t\t\t   AND SC.OBJECTTYPE = 'CatalogGroup') E ON E.OBJECT_ID = 0\n\t\t\t\t\t       LEFT OUTER JOIN (\n\t\t\t\t\t       \t\tSELECT SC.OBJECT_ID OBJECT_ID,\n\t\t\t\t\t       \t\t\t   SA.SEOPAGEDEF_ID SEOPAGEDEF_ID,\n\t\t\t\t\t       \t\t\t   SA.PAGENAME PAGENAME,\n\t\t\t\t\t       \t\t\t   SB.TITLE TITLE,\n\t\t\t\t\t       \t\t\t   SB.META_DESC META_DESC,\n\t\t\t\t\t       \t\t\t   SB.META_KEYWORD META_KEYWORD,\n\t\t\t\t\t       \t\t\t   SB.IMAGE_ALT_DESC IMAGE_ALT_DESC,\n\t\t\t\t\t       \t\t\t   SA.STOREENT_ID STOREENT_ID\n\t\t\t\t\t              FROM SEOPAGEDEF SA, SEOPAGEDEFDESC SB, SEOPAGEDEFOVR SC\n\t\t\t\t\t \t\t\t WHERE SA.SEOPAGEDEF_ID=SB.SEOPAGEDEF_ID AND SA.SEOPAGEDEF_ID=SC.SEOPAGEDEF_ID\n\t\t\t\t\t   \t\t\t   AND SA.STOREENT_ID IN (SELECT RELATEDSTORE_ID FROM STOREREL\n\t\t\t\t\t   \t\t\t   \t\t\t\t\t      WHERE STORE_ID=${param.storeId} AND STRELTYP_ID=-4)\n\t\t\t\t\t   \t\t\t   AND SB.LANGUAGE_ID=${param.langId}\n\t\t\t\t\t   \t\t\t   AND SC.OBJECTTYPE = 'CatalogGroup') F ON F.OBJECT_ID = CD.CATGROUP_ID\n\t\t\t\t\t WHERE ST.STORE_ID=${param.storeId}\n\t\t\t\t\t   AND (( S.STOREENT_ID=ST.STORE_ID AND S.LANGUAGE_ID=${param.langId} )\n\t\t\t\t\t    OR  ( SD.LANGUAGE_ID=ST.LANGUAGE_ID ))\n\t\t\t   ) P ON P.CATGROUP_ID IN (\n\t\t\t\t SELECT C.CATGROUP_ID\n\t\t\t\t   FROM CATGRPREL R, CATGROUP C\n\t\t\t\t  WHERE R.CATALOG_ID = ${param.catalogId}\n\t\t\t\t    AND R.CATALOG_ID IN (SELECT CATALOG_ID FROM STORECAT WHERE STOREENT_ID IN\n\t\t\t\t        (SELECT RELATEDSTORE_ID FROM STOREREL WHERE STATE = 1 AND STRELTYP_ID = -4 AND STORE_ID = ${param.storeId}))\n\t\t\t\t    AND R.CATGROUP_ID_CHILD = C.CATGROUP_ID AND C.MARKFORDELETE = 0\n\t\t\t\t  UNION\n\t\t\t\t SELECT C.CATGROUP_ID\n\t\t\t\t   FROM CATTOGRP R, CATGROUP C\n\t\t\t\t  WHERE R.CATALOG_ID = ${param.catalogId}\n\t\t\t\t    AND R.CATALOG_ID IN (SELECT CATALOG_ID FROM STORECAT WHERE STOREENT_ID IN\n\t\t\t\t        (SELECT RELATEDSTORE_ID FROM STOREREL WHERE STATE = 1 AND STRELTYP_ID = -4 AND STORE_ID = ${param.storeId}))\n\t\t\t\t    AND R.CATGROUP_ID = C.CATGROUP_ID AND C.MARKFORDELETE = 0)\n\t\t WHERE A.TOKENNAME IN ('CategoryToken')\n\t\t   AND A.TOKENVALUE = P.CATGROUP_ID AND B.SEOURLKEYWORD_ID IS NULL) \n\t\t   AND S.SEOURL_ID = SD.SEOURL_ID AND SD.LANGUAGE_ID = ${default.language} ORDER BY S.SEOURL_ID\n\t${paging.prefix} ${param.offset} ${paging.link} ${param.pageSize} ${paging.suffix}",
+                "groupId" : "6a664283-2602-36c8-97ad-2fdd227bc31f",
+                "id" : "dd6b1563-8642-3a0c-91e5-8b99f10ecfc3",
+                "instanceIdentifier" : "bf166040-9590-3f4c-ae98-be355dd44c25",
+                "name" : "Update Category URL Fallback SQL",
+                "type" : "PROCESSOR"
+              },
+              "zIndex" : 0
+            }, {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "\t\tSELECT S.TOKENVALUE, SD.URLKEYWORD FROM SEOURL S, SEOURLKEYWORD SD \n\t\t\twhere S.SEOURL_ID IN(SELECT A.SEOURL_ID FROM SEOURL A\n\t           LEFT OUTER JOIN SEOURLKEYWORD B ON (A.SEOURL_ID=B.SEOURL_ID AND B.LANGUAGE_ID=${param.langId}\n\t                                                AND B.STOREENT_ID IN\n\t                                                    (SELECT RELATEDSTORE_ID FROM STOREREL E WHERE E.STORE_ID=${param.storeId} AND E.STRELTYP_ID=-4))\n\t\t\t   LEFT OUTER JOIN SEOREDIRECT C ON B.SEOURLKEYWORD_ID=C.SEOURLKWD_ID_ORIG\n\t\t\t   LEFT OUTER JOIN SEOURLKEYWORD D ON C.SEOURLKWD_ID_NEW=D.SEOURLKEYWORD_ID\n\t\t\t   LEFT OUTER JOIN LANGUAGE L ON B.LANGUAGE_ID = L.LANGUAGE_ID\n\t\t\t   LEFT OUTER JOIN (\n\t\t\t\t\tSELECT COALESCE(S.DISPLAYNAME, SD.DISPLAYNAME) DISPLAYNAME,\n\t\t\t\t\t       COALESCE(S.DESCRIPTION, SD.DESCRIPTION) DESCRIPTION, \n\t\t\t\t\t       CG.IDENTIFIER, CD.CATGROUP_ID, CD.NAME, CD.KEYWORD, CD.SHORTDESCRIPTION,\n\t\t\t\t\t       E.SEOPAGEDEF_ID SITE_SEOPAGEDEF_ID,\n\t\t\t\t\t       E.PAGENAME SITE_PAGENAME,\n\t\t\t\t\t       E.TITLE SITE_TITLE,\n\t\t\t\t\t       E.META_DESC SITE_META_DESC,\n\t\t\t\t\t       E.META_KEYWORD SITE_META_KEYWORD,\n\t\t\t\t\t       E.IMAGE_ALT_DESC SITE_IMAGE_ALT_DESC,\n\t\t\t\t\t       E.OBJECT_ID SITE_OBJECT_ID,\n\t\t\t\t\t       E.STOREENT_ID SITE_STOREENT_ID,\n\t\t\t\t\t       F.SEOPAGEDEF_ID OVERRIDE_SEOPAGEDEF_ID,\n\t\t\t\t\t       F.PAGENAME OVERRIDE_PAGENAME,\n\t\t\t\t\t       F.TITLE OVERRIDE_TITLE,\n\t\t\t\t\t       F.META_DESC OVERRIDE_META_DESC,\n\t\t\t\t\t       F.META_KEYWORD OVERRIDE_META_KEYWORD,\n\t\t\t\t\t       F.IMAGE_ALT_DESC OVERRIDE_IMAGE_ALT_DESC,\n\t\t\t\t\t       F.OBJECT_ID OVERRIDE_OBJECT_ID,\n\t\t\t\t\t       F.STOREENT_ID OVERRIDE_STOREENT_ID\n\t\t\t\t\t  FROM STOREENTDS S\n\t\t\t\t\t       INNER JOIN STORE ST ON S.STOREENT_ID=ST.STORE_ID\n\t\t\t\t\t       INNER JOIN CATGRPDESC CD ON S.LANGUAGE_ID=CD.LANGUAGE_ID ${extCatgroupAndSQL1b}\n\t\t\t\t\t\t   INNER JOIN CATGROUP CG ON CG.CATGROUP_ID=CD.CATGROUP_ID\n\t\t\t\t\t\t   ${TI_DELTA_CG_URL_JOIN_QUERY}\n                           ${X_CUSTOM_CG_URL_JOIN_QUERY}\n\t\t\t\t\t       INNER JOIN STOREENTDS SD ON ST.STORE_ID=SD.STOREENT_ID\n\t\t\t\t\t       LEFT OUTER JOIN (\n\t\t\t\t\t       \t\tSELECT SC.OBJECT_ID OBJECT_ID,\n\t\t\t\t\t       \t\t\t   SA.SEOPAGEDEF_ID SEOPAGEDEF_ID,\n\t\t\t\t\t       \t\t\t   SA.PAGENAME PAGENAME,\n\t\t\t\t\t       \t\t\t   SB.TITLE TITLE,\n\t\t\t\t\t       \t\t\t   SB.META_DESC META_DESC,\n\t\t\t\t\t       \t\t\t   SB.META_KEYWORD META_KEYWORD,\n\t\t\t\t\t       \t\t\t   SB.IMAGE_ALT_DESC IMAGE_ALT_DESC,\n\t\t\t\t\t       \t\t\t   SA.STOREENT_ID STOREENT_ID\n\t\t\t\t\t              FROM SEOPAGEDEF SA, SEOPAGEDEFDESC SB, SEOPAGEDEFOVR SC\n\t\t\t\t\t \t\t\t WHERE SA.SEOPAGEDEF_ID=SB.SEOPAGEDEF_ID AND SA.SEOPAGEDEF_ID=SC.SEOPAGEDEF_ID\n\t\t\t\t\t   \t\t\t   AND SA.STOREENT_ID IN (SELECT RELATEDSTORE_ID FROM STOREREL\n\t\t\t\t\t   \t\t\t   \t\t\t\t\t      WHERE STORE_ID=${param.storeId} AND STRELTYP_ID=-4)\n\t\t\t\t\t   \t\t\t   AND SB.LANGUAGE_ID=${param.langId}\n\t\t\t\t\t   \t\t\t   AND SC.OBJECTTYPE = 'CatalogGroup') E ON E.OBJECT_ID = 0\n\t\t\t\t\t       LEFT OUTER JOIN (\n\t\t\t\t\t       \t\tSELECT SC.OBJECT_ID OBJECT_ID,\n\t\t\t\t\t       \t\t\t   SA.SEOPAGEDEF_ID SEOPAGEDEF_ID,\n\t\t\t\t\t       \t\t\t   SA.PAGENAME PAGENAME,\n\t\t\t\t\t       \t\t\t   SB.TITLE TITLE,\n\t\t\t\t\t       \t\t\t   SB.META_DESC META_DESC,\n\t\t\t\t\t       \t\t\t   SB.META_KEYWORD META_KEYWORD,\n\t\t\t\t\t       \t\t\t   SB.IMAGE_ALT_DESC IMAGE_ALT_DESC,\n\t\t\t\t\t       \t\t\t   SA.STOREENT_ID STOREENT_ID\n\t\t\t\t\t              FROM SEOPAGEDEF SA, SEOPAGEDEFDESC SB, SEOPAGEDEFOVR SC\n\t\t\t\t\t \t\t\t WHERE SA.SEOPAGEDEF_ID=SB.SEOPAGEDEF_ID AND SA.SEOPAGEDEF_ID=SC.SEOPAGEDEF_ID\n\t\t\t\t\t   \t\t\t   AND SA.STOREENT_ID IN (SELECT RELATEDSTORE_ID FROM STOREREL\n\t\t\t\t\t   \t\t\t   \t\t\t\t\t      WHERE STORE_ID=${param.storeId} AND STRELTYP_ID=-4)\n\t\t\t\t\t   \t\t\t   AND SB.LANGUAGE_ID=${param.langId}\n\t\t\t\t\t   \t\t\t   AND SC.OBJECTTYPE = 'CatalogGroup') F ON F.OBJECT_ID = CD.CATGROUP_ID\n\t\t\t\t\t WHERE ST.STORE_ID=${param.storeId}\n\t\t\t\t\t   AND (( S.STOREENT_ID=ST.STORE_ID AND S.LANGUAGE_ID=${param.langId} )\n\t\t\t\t\t    OR  ( SD.LANGUAGE_ID=ST.LANGUAGE_ID ))\n\t\t\t   ) P ON P.CATGROUP_ID IN (\n\t\t\t\t SELECT C.CATGROUP_ID\n\t\t\t\t   FROM CATGRPREL R, CATGROUP C\n\t\t\t\t  WHERE R.CATALOG_ID = ${param.catalogId}\n\t\t\t\t    AND R.CATALOG_ID IN (SELECT CATALOG_ID FROM STORECAT WHERE STOREENT_ID IN\n\t\t\t\t        (SELECT RELATEDSTORE_ID FROM STOREREL WHERE STATE = 1 AND STRELTYP_ID = -4 AND STORE_ID = ${param.storeId}))\n\t\t\t\t    AND R.CATGROUP_ID_CHILD = C.CATGROUP_ID AND C.MARKFORDELETE = 0\n\t\t\t\t  UNION\n\t\t\t\t SELECT C.CATGROUP_ID\n\t\t\t\t   FROM CATTOGRP R, CATGROUP C\n\t\t\t\t  WHERE R.CATALOG_ID = ${param.catalogId}\n\t\t\t\t    AND R.CATALOG_ID IN (SELECT CATALOG_ID FROM STORECAT WHERE STOREENT_ID IN\n\t\t\t\t        (SELECT RELATEDSTORE_ID FROM STOREREL WHERE STATE = 1 AND STRELTYP_ID = -4 AND STORE_ID = ${param.storeId}))\n\t\t\t\t    AND R.CATGROUP_ID = C.CATGROUP_ID AND C.MARKFORDELETE = 0)\n\t\t WHERE A.TOKENNAME IN ('CategoryToken')\n\t\t   AND A.TOKENVALUE = P.CATGROUP_ID AND B.SEOURLKEYWORD_ID IS NULL) \n\t\t   AND S.SEOURL_ID = SD.SEOURL_ID AND SD.LANGUAGE_ID = ${default.language} ORDER BY S.SEOURL_ID\n\t${paging.prefix} ${param.offset} ${paging.link} ${param.pageSize} ${paging.suffix}",
+                "groupId" : "6a664283-2602-36c8-97ad-2fdd227bc31f",
+                "id" : "dd6b1563-8642-3a0c-91e5-8b99f10ecfc3",
+                "instanceIdentifier" : "bf166040-9590-3f4c-ae98-be355dd44c25",
+                "name" : "Update Category URL Fallback SQL",
+                "type" : "PROCESSOR"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "6a664283-2602-36c8-97ad-2fdd227bc31f",
+              "identifier" : "20350284-1973-3bee-9468-10c727b4116f",
+              "instanceIdentifier" : "207c676d-70e7-363a-d5cb-ee82b92b8fff",
+              "labelIndex" : 1,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "partitioningAttribute" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "success" ],
+              "source" : {
+                "comments" : "",
+                "groupId" : "6a664283-2602-36c8-97ad-2fdd227bc31f",
+                "id" : "6b531e1c-b384-36bc-b887-c62adefc9172",
+                "instanceIdentifier" : "76616aa5-9da6-385c-2998-b6dda27a4355",
+                "name" : "Define scroll offset and page size",
+                "type" : "PROCESSOR"
+              },
+              "zIndex" : 0
+            } ],
+            "controllerServices" : [ ],
+            "defaultBackPressureDataSizeThreshold" : "1 GB",
+            "defaultBackPressureObjectThreshold" : 10000,
+            "defaultFlowFileExpiration" : "0 sec",
+            "flowFileConcurrency" : "UNBOUNDED",
+            "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+            "funnels" : [ {
+              "componentType" : "FUNNEL",
+              "groupIdentifier" : "6a664283-2602-36c8-97ad-2fdd227bc31f",
+              "identifier" : "2d67f3cd-1914-3f71-895c-dabe6c8a1507",
+              "instanceIdentifier" : "f9c17f9a-7ca4-3b8e-f0db-25db8add75b6",
+              "position" : {
+                "x" : 1640.0,
+                "y" : -112.0
+              }
+            }, {
+              "componentType" : "FUNNEL",
+              "groupIdentifier" : "6a664283-2602-36c8-97ad-2fdd227bc31f",
+              "identifier" : "32da32ed-d844-38a8-a5ff-f1eee220754f",
+              "instanceIdentifier" : "dcd8d11d-a510-3b77-a913-493eec1e722f",
+              "position" : {
+                "x" : 3024.0,
+                "y" : -112.0
+              }
+            } ],
+            "groupIdentifier" : "72a7782b-2acc-319d-abb6-41fdcfc5a77e",
+            "identifier" : "6a664283-2602-36c8-97ad-2fdd227bc31f",
+            "inputPorts" : [ {
+              "allowRemoteAccess" : false,
+              "comments" : "",
+              "componentType" : "INPUT_PORT",
+              "concurrentlySchedulableTaskCount" : 1,
+              "groupIdentifier" : "6a664283-2602-36c8-97ad-2fdd227bc31f",
+              "identifier" : "ccb8119d-1567-3c29-a401-6874f8072c84",
+              "instanceIdentifier" : "135424bb-b3d7-3cfc-be0c-cd05a688a766",
+              "name" : "INPUT",
+              "position" : {
+                "x" : 144.0,
+                "y" : -368.0
+              },
+              "scheduledState" : "ENABLED",
+              "type" : "INPUT_PORT"
+            } ],
+            "instanceIdentifier" : "7b22fe5b-1dd1-3f9d-9a08-fff6172e44f0",
+            "labels" : [ {
+              "componentType" : "LABEL",
+              "groupIdentifier" : "6a664283-2602-36c8-97ad-2fdd227bc31f",
+              "height" : 784.0,
+              "identifier" : "dd49b6d9-e828-3975-8c5f-76b112303831",
+              "instanceIdentifier" : "8f5bc710-59ba-3dc3-d5e1-1b0ce0cf3a74",
+              "label" : "SCROLL SQL",
+              "position" : {
+                "x" : 264.0,
+                "y" : -776.0
+              },
+              "style" : {
+                "background-color" : "#cceeff",
+                "font-size" : "20px"
+              },
+              "width" : 3448.0,
+              "zIndex" : 0
+            } ],
+            "name" : "SCROLL SQL",
+            "outputPorts" : [ {
+              "allowRemoteAccess" : false,
+              "comments" : "",
+              "componentType" : "OUTPUT_PORT",
+              "concurrentlySchedulableTaskCount" : 1,
+              "groupIdentifier" : "6a664283-2602-36c8-97ad-2fdd227bc31f",
+              "identifier" : "1a85c2ee-3035-3287-b748-36edf2c0a93f",
+              "instanceIdentifier" : "e8916ee6-1705-3eac-bb77-459ad6421077",
+              "name" : "ERROR",
+              "position" : {
+                "x" : 3592.0,
+                "y" : -112.0
+              },
+              "scheduledState" : "ENABLED",
+              "type" : "OUTPUT_PORT"
+            }, {
+              "allowRemoteAccess" : false,
+              "comments" : "",
+              "componentType" : "OUTPUT_PORT",
+              "concurrentlySchedulableTaskCount" : 1,
+              "groupIdentifier" : "6a664283-2602-36c8-97ad-2fdd227bc31f",
+              "identifier" : "60d12313-facf-3e63-ad3a-1f4b622d0b47",
+              "instanceIdentifier" : "7d5d2e56-abc7-3760-f49f-bad0644655e9",
+              "name" : "SUCCESS",
+              "position" : {
+                "x" : 3592.0,
+                "y" : -368.0
+              },
+              "scheduledState" : "ENABLED",
+              "type" : "OUTPUT_PORT"
+            }, {
+              "allowRemoteAccess" : false,
+              "comments" : "",
+              "componentType" : "OUTPUT_PORT",
+              "concurrentlySchedulableTaskCount" : 1,
+              "groupIdentifier" : "6a664283-2602-36c8-97ad-2fdd227bc31f",
+              "identifier" : "60d90054-f784-371f-ba79-5ed3d93162b6",
+              "instanceIdentifier" : "78e1b1e8-1cda-377d-c0de-bbc69af5b082",
+              "name" : "EMPTY",
+              "position" : {
+                "x" : 3592.0,
+                "y" : -240.0
+              },
+              "scheduledState" : "ENABLED",
+              "type" : "OUTPUT_PORT"
+            } ],
+            "position" : {
+              "x" : 192.0,
+              "y" : 72.0
+            },
+            "processGroups" : [ ],
+            "processors" : [ {
+              "autoTerminatedRelationships" : [ "original" ],
+              "backoffMechanism" : "PENALIZE_FLOWFILE",
+              "bulletinLevel" : "WARN",
+              "bundle" : {
+                "artifact" : "commerce-search-processors-nar",
+                "group" : "com.hcl.commerce",
+                "version" : "9.1.16.0"
+              },
+              "comments" : "",
+              "componentType" : "PROCESSOR",
+              "concurrentlySchedulableTaskCount" : 1,
+              "executionNode" : "ALL",
+              "groupIdentifier" : "6a664283-2602-36c8-97ad-2fdd227bc31f",
+              "identifier" : "3090aae7-20c7-3cb6-956b-6e206fd3ee08",
+              "instanceIdentifier" : "682b6cb5-e7a6-385f-fa28-6f94f3f07b0f",
+              "maxBackoffPeriod" : "10 mins",
+              "name" : "Analyze SQL Response",
+              "penaltyDuration" : "1 sec",
+              "position" : {
+                "x" : 2872.0,
+                "y" : -408.0
+              },
+              "properties" : {
+                "Relationship Type" : "success",
+                "Auto Refresh Index" : "${scroll.refresh.index}"
+              },
+              "propertyDescriptors" : {
+                "Relationship Type" : {
+                  "displayName" : "Relationship Type",
+                  "identifiesControllerService" : false,
+                  "name" : "Relationship Type",
+                  "sensitive" : false
+                },
+                "Auto Refresh Index" : {
+                  "displayName" : "Auto Refresh Index",
+                  "identifiesControllerService" : false,
+                  "name" : "Auto Refresh Index",
+                  "sensitive" : false
+                }
+              },
+              "retriedRelationships" : [ ],
+              "retryCount" : 10,
+              "runDurationMillis" : 0,
+              "scheduledState" : "ENABLED",
+              "schedulingPeriod" : "0 sec",
+              "schedulingStrategy" : "TIMER_DRIVEN",
+              "style" : {
+                "background-color" : "#0000ff"
+              },
+              "type" : "com.hcl.software.data.ingest.common.processors.AnalyzeExecuteSQLRecordResponse",
+              "yieldDuration" : "1 sec"
+            }, {
+              "autoTerminatedRelationships" : [ ],
+              "backoffMechanism" : "PENALIZE_FLOWFILE",
+              "bulletinLevel" : "NONE",
+              "bundle" : {
+                "artifact" : "nifi-update-attribute-nar",
+                "group" : "org.apache.nifi",
+                "version" : "1.22.0"
+              },
+              "comments" : "",
+              "componentType" : "PROCESSOR",
+              "concurrentlySchedulableTaskCount" : 1,
+              "executionNode" : "ALL",
+              "groupIdentifier" : "6a664283-2602-36c8-97ad-2fdd227bc31f",
+              "identifier" : "2edeb55c-efd4-31b4-b181-b04e665cae12",
+              "instanceIdentifier" : "5dd13cfb-1346-37c9-9abe-ad78b4792c17",
+              "maxBackoffPeriod" : "10 mins",
+              "name" : "Update offset for next iteration",
+              "penaltyDuration" : "0 sec",
+              "position" : {
+                "x" : 1488.0,
+                "y" : -696.0
+              },
+              "properties" : {
+                "Store State" : "Do not store state",
+                "canonical-value-lookup-cache-size" : "100",
+                "param.offset" : "${param.offset:plus(${param.pageSize})}"
+              },
+              "propertyDescriptors" : {
+                "Delete Attributes Expression" : {
+                  "displayName" : "Delete Attributes Expression",
+                  "identifiesControllerService" : false,
+                  "name" : "Delete Attributes Expression",
+                  "sensitive" : false
+                },
+                "Store State" : {
+                  "displayName" : "Store State",
+                  "identifiesControllerService" : false,
+                  "name" : "Store State",
+                  "sensitive" : false
+                },
+                "canonical-value-lookup-cache-size" : {
+                  "displayName" : "Cache Value Lookup Cache Size",
+                  "identifiesControllerService" : false,
+                  "name" : "canonical-value-lookup-cache-size",
+                  "sensitive" : false
+                },
+                "Stateful Variables Initial Value" : {
+                  "displayName" : "Stateful Variables Initial Value",
+                  "identifiesControllerService" : false,
+                  "name" : "Stateful Variables Initial Value",
+                  "sensitive" : false
+                },
+                "param.offset" : {
+                  "displayName" : "param.offset",
+                  "identifiesControllerService" : false,
+                  "name" : "param.offset",
+                  "sensitive" : false
+                }
+              },
+              "retriedRelationships" : [ ],
+              "retryCount" : 10,
+              "runDurationMillis" : 0,
+              "scheduledState" : "ENABLED",
+              "schedulingPeriod" : "0 sec",
+              "schedulingStrategy" : "TIMER_DRIVEN",
+              "style" : { },
+              "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
+              "yieldDuration" : "1 sec"
+            }, {
+              "autoTerminatedRelationships" : [ ],
+              "backoffMechanism" : "PENALIZE_FLOWFILE",
+              "bulletinLevel" : "NONE",
+              "bundle" : {
+                "artifact" : "nifi-standard-nar",
+                "group" : "org.apache.nifi",
+                "version" : "1.22.0"
+              },
+              "comments" : "",
+              "componentType" : "PROCESSOR",
+              "concurrentlySchedulableTaskCount" : 1,
+              "executionNode" : "ALL",
+              "groupIdentifier" : "6a664283-2602-36c8-97ad-2fdd227bc31f",
+              "identifier" : "b5b436a2-676c-31b8-b5cb-74d0ef478110",
+              "instanceIdentifier" : "b46ad6be-24db-30f9-d278-ae377bb5656a",
+              "maxBackoffPeriod" : "10 mins",
+              "name" : "Execute SQL - Update Category URL Fallback",
+              "penaltyDuration" : "0 sec",
+              "position" : {
+                "x" : 2200.0,
+                "y" : -408.0
+              },
+              "properties" : {
+                "esql-max-rows" : "${scroll.bucket.size}",
+                "esqlrecord-record-writer" : "86d146a5-07f9-3052-815c-ca2aa242ad4f",
+                "dbf-default-precision" : "10",
+                "Max Wait Time" : "0 seconds",
+                "Database Connection Pooling Service" : "454852e3-7596-3f39-8e70-058b07f95ee0",
+                "esql-auto-commit" : "true",
+                "dbf-user-logical-types" : "false",
+                "dbf-default-scale" : "0",
+                "sql-pre-query" : "${ingest.database.schema.sql}",
+                "esql-output-batch-size" : "0",
+                "esql-fetch-size" : "0",
+                "SQL select query" : "${ingest.database.sql}",
+                "esqlrecord-normalize" : "false"
+              },
+              "propertyDescriptors" : {
+                "esql-max-rows" : {
+                  "displayName" : "Max Rows Per Flow File",
+                  "identifiesControllerService" : false,
+                  "name" : "esql-max-rows",
+                  "sensitive" : false
+                },
+                "esqlrecord-record-writer" : {
+                  "displayName" : "Record Writer",
+                  "identifiesControllerService" : true,
+                  "name" : "esqlrecord-record-writer",
+                  "sensitive" : false
+                },
+                "dbf-default-precision" : {
+                  "displayName" : "Default Decimal Precision",
+                  "identifiesControllerService" : false,
+                  "name" : "dbf-default-precision",
+                  "sensitive" : false
+                },
+                "Max Wait Time" : {
+                  "displayName" : "Max Wait Time",
+                  "identifiesControllerService" : false,
+                  "name" : "Max Wait Time",
+                  "sensitive" : false
+                },
+                "Database Connection Pooling Service" : {
+                  "displayName" : "Database Connection Pooling Service",
+                  "identifiesControllerService" : true,
+                  "name" : "Database Connection Pooling Service",
+                  "sensitive" : false
+                },
+                "sql-post-query" : {
+                  "displayName" : "SQL Post-Query",
+                  "identifiesControllerService" : false,
+                  "name" : "sql-post-query",
+                  "sensitive" : false
+                },
+                "esql-auto-commit" : {
+                  "displayName" : "Set Auto Commit",
+                  "identifiesControllerService" : false,
+                  "name" : "esql-auto-commit",
+                  "sensitive" : false
+                },
+                "dbf-user-logical-types" : {
+                  "displayName" : "Use Avro Logical Types",
+                  "identifiesControllerService" : false,
+                  "name" : "dbf-user-logical-types",
+                  "sensitive" : false
+                },
+                "dbf-default-scale" : {
+                  "displayName" : "Default Decimal Scale",
+                  "identifiesControllerService" : false,
+                  "name" : "dbf-default-scale",
+                  "sensitive" : false
+                },
+                "sql-pre-query" : {
+                  "displayName" : "SQL Pre-Query",
+                  "identifiesControllerService" : false,
+                  "name" : "sql-pre-query",
+                  "sensitive" : false
+                },
+                "esql-output-batch-size" : {
+                  "displayName" : "Output Batch Size",
+                  "identifiesControllerService" : false,
+                  "name" : "esql-output-batch-size",
+                  "sensitive" : false
+                },
+                "esql-fetch-size" : {
+                  "displayName" : "Fetch Size",
+                  "identifiesControllerService" : false,
+                  "name" : "esql-fetch-size",
+                  "sensitive" : false
+                },
+                "SQL select query" : {
+                  "displayName" : "SQL select query",
+                  "identifiesControllerService" : false,
+                  "name" : "SQL select query",
+                  "sensitive" : false
+                },
+                "esqlrecord-normalize" : {
+                  "displayName" : "Normalize Table/Column Names",
+                  "identifiesControllerService" : false,
+                  "name" : "esqlrecord-normalize",
+                  "sensitive" : false
+                }
+              },
+              "retriedRelationships" : [ ],
+              "retryCount" : 10,
+              "runDurationMillis" : 0,
+              "scheduledState" : "ENABLED",
+              "schedulingPeriod" : "0 sec",
+              "schedulingStrategy" : "TIMER_DRIVEN",
+              "style" : {
+                "background-color" : "#ffff00"
+              },
+              "type" : "org.apache.nifi.processors.standard.ExecuteSQLRecord",
+              "yieldDuration" : "1 sec"
+            }, {
+              "autoTerminatedRelationships" : [ ],
+              "backoffMechanism" : "PENALIZE_FLOWFILE",
+              "bulletinLevel" : "WARN",
+              "bundle" : {
+                "artifact" : "commerce-search-processors-nar",
+                "group" : "com.hcl.commerce",
+                "version" : "9.1.16.0"
+              },
+              "comments" : "\t\tSELECT S.TOKENVALUE, SD.URLKEYWORD FROM SEOURL S, SEOURLKEYWORD SD \n\t\t\twhere S.SEOURL_ID IN(SELECT A.SEOURL_ID FROM SEOURL A\n\t           LEFT OUTER JOIN SEOURLKEYWORD B ON (A.SEOURL_ID=B.SEOURL_ID AND B.LANGUAGE_ID=${param.langId}\n\t                                                AND B.STOREENT_ID IN\n\t                                                    (SELECT RELATEDSTORE_ID FROM STOREREL E WHERE E.STORE_ID=${param.storeId} AND E.STRELTYP_ID=-4))\n\t\t\t   LEFT OUTER JOIN SEOREDIRECT C ON B.SEOURLKEYWORD_ID=C.SEOURLKWD_ID_ORIG\n\t\t\t   LEFT OUTER JOIN SEOURLKEYWORD D ON C.SEOURLKWD_ID_NEW=D.SEOURLKEYWORD_ID\n\t\t\t   LEFT OUTER JOIN LANGUAGE L ON B.LANGUAGE_ID = L.LANGUAGE_ID\n\t\tWHERE A.TOKENNAME IN ('CategoryToken') AND A.TOKENVALUE \n\t\t\t IN (\n\t\t\t\t SELECT C.CATGROUP_ID\n\t\t\t\t   FROM CATGRPREL R, CATGROUP C\n\t\t\t\t  WHERE R.CATALOG_ID = ${param.catalogId}\n\t\t\t\t    AND R.CATGROUP_ID_CHILD = C.CATGROUP_ID AND C.MARKFORDELETE = 0\n\t\t\t\t  UNION\n\t\t\t\t SELECT C.CATGROUP_ID\n\t\t\t\t   FROM CATTOGRP R, CATGROUP C\n\t\t\t\t  WHERE R.CATALOG_ID = ${param.catalogId}\n\t\t\t\t    AND R.CATGROUP_ID = C.CATGROUP_ID AND C.MARKFORDELETE = 0)\n\t\t   AND B.SEOURLKEYWORD_ID IS NULL) \n\t\t   AND S.SEOURL_ID = SD.SEOURL_ID AND SD.LANGUAGE_ID = ${default.language} ORDER BY S.SEOURL_ID\n\t\t${paging.prefix} ${param.offset} ${paging.link} ${param.pageSize} ${paging.suffix}",
+              "componentType" : "PROCESSOR",
+              "concurrentlySchedulableTaskCount" : 1,
+              "executionNode" : "ALL",
+              "groupIdentifier" : "6a664283-2602-36c8-97ad-2fdd227bc31f",
+              "identifier" : "dd6b1563-8642-3a0c-91e5-8b99f10ecfc3",
+              "instanceIdentifier" : "bf166040-9590-3f4c-ae98-be355dd44c25",
+              "maxBackoffPeriod" : "10 mins",
+              "name" : "Update Category URL Fallback SQL",
+              "penaltyDuration" : "30 sec",
+              "position" : {
+                "x" : 1488.0,
+                "y" : -408.0
+              },
+              "properties" : {
+                "Ingest Profile" : "${ingest.profile.name}",
+                "Use Custom SQL" : "use_default_sql",
+                "Profile Service" : "f46f2e5a-db35-3fcd-8f15-ead9034bdf72",
+                "SQL Location" : "sql/DatabaseURLStage1d.sql"
+              },
+              "propertyDescriptors" : {
+                "Ingest Profile" : {
+                  "displayName" : "Ingest Profile",
+                  "identifiesControllerService" : false,
+                  "name" : "Ingest Profile",
+                  "sensitive" : false
+                },
+                "Use Custom SQL" : {
+                  "displayName" : "Use Custom SQL",
+                  "identifiesControllerService" : false,
+                  "name" : "Use Custom SQL",
+                  "sensitive" : false
+                },
+                "Profile Service" : {
+                  "displayName" : "Profile Service",
+                  "identifiesControllerService" : true,
+                  "name" : "Profile Service",
+                  "sensitive" : false
+                },
+                "Custom SQL" : {
+                  "displayName" : "Custom SQL",
+                  "identifiesControllerService" : false,
+                  "name" : "Custom SQL",
+                  "sensitive" : false
+                },
+                "SQL Location" : {
+                  "displayName" : "SQL Location",
+                  "identifiesControllerService" : false,
+                  "name" : "SQL Location",
+                  "sensitive" : false
+                }
+              },
+              "retriedRelationships" : [ ],
+              "retryCount" : 10,
+              "runDurationMillis" : 0,
+              "scheduledState" : "ENABLED",
+              "schedulingPeriod" : "0 sec",
+              "schedulingStrategy" : "TIMER_DRIVEN",
+              "style" : {
+                "background-color" : "#5500ff"
+              },
+              "type" : "com.hcl.software.data.ingest.common.processors.GenerateSQL",
+              "yieldDuration" : "1 sec"
+            }, {
+              "autoTerminatedRelationships" : [ ],
+              "backoffMechanism" : "PENALIZE_FLOWFILE",
+              "bulletinLevel" : "NONE",
+              "bundle" : {
+                "artifact" : "nifi-update-attribute-nar",
+                "group" : "org.apache.nifi",
+                "version" : "1.22.0"
+              },
+              "comments" : "",
+              "componentType" : "PROCESSOR",
+              "concurrentlySchedulableTaskCount" : 1,
+              "executionNode" : "ALL",
+              "groupIdentifier" : "6a664283-2602-36c8-97ad-2fdd227bc31f",
+              "identifier" : "6b531e1c-b384-36bc-b887-c62adefc9172",
+              "instanceIdentifier" : "76616aa5-9da6-385c-2998-b6dda27a4355",
+              "maxBackoffPeriod" : "10 mins",
+              "name" : "Define scroll offset and page size",
+              "penaltyDuration" : "0 sec",
+              "position" : {
+                "x" : 760.0,
+                "y" : -408.0
+              },
+              "properties" : {
+                "param.bucketSize" : "${scroll.bucket.size}",
+                "Store State" : "Do not store state",
+                "canonical-value-lookup-cache-size" : "100",
+                "param.pageSize" : "${scroll.page.size}",
+                "param.offset" : "0"
+              },
+              "propertyDescriptors" : {
+                "Delete Attributes Expression" : {
+                  "displayName" : "Delete Attributes Expression",
+                  "identifiesControllerService" : false,
+                  "name" : "Delete Attributes Expression",
+                  "sensitive" : false
+                },
+                "param.bucketSize" : {
+                  "displayName" : "param.bucketSize",
+                  "identifiesControllerService" : false,
+                  "name" : "param.bucketSize",
+                  "sensitive" : false
+                },
+                "Store State" : {
+                  "displayName" : "Store State",
+                  "identifiesControllerService" : false,
+                  "name" : "Store State",
+                  "sensitive" : false
+                },
+                "canonical-value-lookup-cache-size" : {
+                  "displayName" : "Cache Value Lookup Cache Size",
+                  "identifiesControllerService" : false,
+                  "name" : "canonical-value-lookup-cache-size",
+                  "sensitive" : false
+                },
+                "param.pageSize" : {
+                  "displayName" : "param.pageSize",
+                  "identifiesControllerService" : false,
+                  "name" : "param.pageSize",
+                  "sensitive" : false
+                },
+                "Stateful Variables Initial Value" : {
+                  "displayName" : "Stateful Variables Initial Value",
+                  "identifiesControllerService" : false,
+                  "name" : "Stateful Variables Initial Value",
+                  "sensitive" : false
+                },
+                "param.offset" : {
+                  "displayName" : "param.offset",
+                  "identifiesControllerService" : false,
+                  "name" : "param.offset",
+                  "sensitive" : false
+                }
+              },
+              "retriedRelationships" : [ ],
+              "retryCount" : 10,
+              "runDurationMillis" : 0,
+              "scheduledState" : "ENABLED",
+              "schedulingPeriod" : "0 sec",
+              "schedulingStrategy" : "TIMER_DRIVEN",
+              "style" : { },
+              "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
+              "yieldDuration" : "1 sec"
+            }, {
+              "autoTerminatedRelationships" : [ "failure" ],
+              "backoffMechanism" : "PENALIZE_FLOWFILE",
+              "bulletinLevel" : "NONE",
+              "bundle" : {
+                "artifact" : "nifi-standard-nar",
+                "group" : "org.apache.nifi",
+                "version" : "1.22.0"
+              },
+              "comments" : "",
+              "componentType" : "PROCESSOR",
+              "concurrentlySchedulableTaskCount" : 1,
+              "executionNode" : "ALL",
+              "groupIdentifier" : "6a664283-2602-36c8-97ad-2fdd227bc31f",
+              "identifier" : "6b04043e-61aa-3c83-b5a6-c2aa441d84e6",
+              "instanceIdentifier" : "3144b9da-6b1a-37fe-3c30-7797f031395d",
+              "maxBackoffPeriod" : "10 mins",
+              "name" : "Clear payload",
+              "penaltyDuration" : "0 sec",
+              "position" : {
+                "x" : 2872.0,
+                "y" : -696.0
+              },
+              "properties" : {
+                "Regular Expression" : "(?s)(^.*$)",
+                "Replacement Value" : "{}",
+                "Evaluation Mode" : "Entire text",
+                "Line-by-Line Evaluation Mode" : "All",
+                "Character Set" : "UTF-8",
+                "Maximum Buffer Size" : "1 MB",
+                "Replacement Strategy" : "Always Replace"
+              },
+              "propertyDescriptors" : {
+                "Regular Expression" : {
+                  "displayName" : "Search Value",
+                  "identifiesControllerService" : false,
+                  "name" : "Regular Expression",
+                  "sensitive" : false
+                },
+                "Replacement Value" : {
+                  "displayName" : "Replacement Value",
+                  "identifiesControllerService" : false,
+                  "name" : "Replacement Value",
+                  "sensitive" : false
+                },
+                "Evaluation Mode" : {
+                  "displayName" : "Evaluation Mode",
+                  "identifiesControllerService" : false,
+                  "name" : "Evaluation Mode",
+                  "sensitive" : false
+                },
+                "Text to Prepend" : {
+                  "displayName" : "Text to Prepend",
+                  "identifiesControllerService" : false,
+                  "name" : "Text to Prepend",
+                  "sensitive" : false
+                },
+                "Line-by-Line Evaluation Mode" : {
+                  "displayName" : "Line-by-Line Evaluation Mode",
+                  "identifiesControllerService" : false,
+                  "name" : "Line-by-Line Evaluation Mode",
+                  "sensitive" : false
+                },
+                "Character Set" : {
+                  "displayName" : "Character Set",
+                  "identifiesControllerService" : false,
+                  "name" : "Character Set",
+                  "sensitive" : false
+                },
+                "Maximum Buffer Size" : {
+                  "displayName" : "Maximum Buffer Size",
+                  "identifiesControllerService" : false,
+                  "name" : "Maximum Buffer Size",
+                  "sensitive" : false
+                },
+                "Replacement Strategy" : {
+                  "displayName" : "Replacement Strategy",
+                  "identifiesControllerService" : false,
+                  "name" : "Replacement Strategy",
+                  "sensitive" : false
+                },
+                "Text to Append" : {
+                  "displayName" : "Text to Append",
+                  "identifiesControllerService" : false,
+                  "name" : "Text to Append",
+                  "sensitive" : false
+                }
+              },
+              "retriedRelationships" : [ ],
+              "retryCount" : 10,
+              "runDurationMillis" : 0,
+              "scheduledState" : "ENABLED",
+              "schedulingPeriod" : "0 sec",
+              "schedulingStrategy" : "TIMER_DRIVEN",
+              "style" : { },
+              "type" : "org.apache.nifi.processors.standard.ReplaceText",
+              "yieldDuration" : "1 sec"
+            } ],
+            "remoteProcessGroups" : [ ],
+            "variables" : { }
+          }, {
+            "comments" : "",
+            "componentType" : "PROCESS_GROUP",
+            "connections" : [ {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "",
+                "groupId" : "0a4e1b92-d0d3-3222-af36-93d92e06e6be",
+                "id" : "4796251d-2f14-3d4b-818b-eb9ecf7c7f3b",
+                "instanceIdentifier" : "ccade010-5310-3d25-825f-a55d62eaca2a",
+                "name" : "Penalize Document",
+                "type" : "PROCESSOR"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "0a4e1b92-d0d3-3222-af36-93d92e06e6be",
+              "identifier" : "bcb5f1ff-6d3a-31a1-bddd-10ddb5e39105",
+              "instanceIdentifier" : "856ee49a-1bfc-364e-0fef-72a1bd972c20",
+              "labelIndex" : 1,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "partitioningAttribute" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "nrt" ],
+              "source" : {
+                "comments" : "",
+                "groupId" : "0a4e1b92-d0d3-3222-af36-93d92e06e6be",
+                "id" : "5b257c58-a8c5-35b3-bba8-47e5c4beec12",
+                "instanceIdentifier" : "81025f0d-c42b-32d5-e39a-e94f811c52d5",
+                "name" : "Route on NRT",
+                "type" : "PROCESSOR"
+              },
+              "zIndex" : 0
+            }, {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "",
+                "groupId" : "0a4e1b92-d0d3-3222-af36-93d92e06e6be",
+                "id" : "5b257c58-a8c5-35b3-bba8-47e5c4beec12",
+                "instanceIdentifier" : "81025f0d-c42b-32d5-e39a-e94f811c52d5",
+                "name" : "Route on NRT",
+                "type" : "PROCESSOR"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "0a4e1b92-d0d3-3222-af36-93d92e06e6be",
+              "identifier" : "c797e828-c17e-3ee4-89e4-0347cff8ac0a",
+              "instanceIdentifier" : "0fc1a7c9-dd4e-3369-dc43-24aa11d7470c",
+              "labelIndex" : 1,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "partitioningAttribute" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "next" ],
+              "source" : {
+                "comments" : "",
+                "groupId" : "0a4e1b92-d0d3-3222-af36-93d92e06e6be",
+                "id" : "0cb4f880-5965-3f8f-8ce4-9008440dad77",
+                "instanceIdentifier" : "9991a47a-afb9-3587-c9d6-e9b6833d0a5a",
+                "name" : "Route On Any Catalog",
+                "type" : "PROCESSOR"
+              },
+              "zIndex" : 0
+            }, {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "",
+                "groupId" : "0a4e1b92-d0d3-3222-af36-93d92e06e6be",
+                "id" : "0cb4f880-5965-3f8f-8ce4-9008440dad77",
+                "instanceIdentifier" : "9991a47a-afb9-3587-c9d6-e9b6833d0a5a",
+                "name" : "Route On Any Catalog",
+                "type" : "PROCESSOR"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "0a4e1b92-d0d3-3222-af36-93d92e06e6be",
+              "identifier" : "c565ceb1-c4b0-3e0a-ae2b-4ddb3fff13cc",
+              "instanceIdentifier" : "481077df-608c-37ae-e145-794c6d4f5cdd",
+              "labelIndex" : 1,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "partitioningAttribute" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "success" ],
+              "source" : {
+                "comments" : "",
+                "groupId" : "0a4e1b92-d0d3-3222-af36-93d92e06e6be",
+                "id" : "f636530f-e1d3-3fd7-863d-e7185dd68488",
+                "instanceIdentifier" : "0b515352-e42f-30f4-833b-2a2a7b5832ae",
+                "name" : "Set stage.name and stage.start.time",
+                "type" : "PROCESSOR"
+              },
+              "zIndex" : 0
+            }, {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "",
+                "groupId" : "0a4e1b92-d0d3-3222-af36-93d92e06e6be",
+                "id" : "f636530f-e1d3-3fd7-863d-e7185dd68488",
+                "instanceIdentifier" : "0b515352-e42f-30f4-833b-2a2a7b5832ae",
+                "name" : "Set stage.name and stage.start.time",
+                "type" : "PROCESSOR"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "0a4e1b92-d0d3-3222-af36-93d92e06e6be",
+              "identifier" : "b12879b6-71c7-35de-96d2-93b99cf9a45a",
+              "instanceIdentifier" : "cb4ae105-9481-3542-e0bc-a2a30c1304f9",
+              "labelIndex" : 1,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "partitioningAttribute" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "" ],
+              "source" : {
+                "comments" : "",
+                "groupId" : "0a4e1b92-d0d3-3222-af36-93d92e06e6be",
+                "id" : "8fafa0c1-6c8f-369a-883b-9899ded3ea64",
+                "instanceIdentifier" : "52f5f852-467a-3c01-6d1a-c2ab9a32a0ec",
+                "name" : "INPUT",
+                "type" : "INPUT_PORT"
+              },
+              "zIndex" : 0
+            }, {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "",
+                "groupId" : "0a4e1b92-d0d3-3222-af36-93d92e06e6be",
+                "id" : "15343f0b-4820-3001-a4da-ff81418f4359",
+                "instanceIdentifier" : "f5eff148-2f6a-3423-a560-d5b09071595e",
+                "name" : "NEXT",
+                "type" : "OUTPUT_PORT"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "0a4e1b92-d0d3-3222-af36-93d92e06e6be",
+              "identifier" : "da872222-9502-39a1-aafe-ac68a507d8c2",
+              "instanceIdentifier" : "b1e685b7-a87f-3d36-8b38-698a65e12a06",
+              "labelIndex" : 1,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "partitioningAttribute" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "unmatched" ],
+              "source" : {
+                "comments" : "",
+                "groupId" : "0a4e1b92-d0d3-3222-af36-93d92e06e6be",
+                "id" : "5b257c58-a8c5-35b3-bba8-47e5c4beec12",
+                "instanceIdentifier" : "81025f0d-c42b-32d5-e39a-e94f811c52d5",
+                "name" : "Route on NRT",
+                "type" : "PROCESSOR"
+              },
+              "zIndex" : 0
+            }, {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "",
+                "groupId" : "0a4e1b92-d0d3-3222-af36-93d92e06e6be",
+                "id" : "a6766a9f-f781-3d2b-8250-2424effd161c",
+                "instanceIdentifier" : "b3d679f0-57aa-39e7-4acb-e70f79192e12",
+                "name" : "Track Document",
+                "type" : "PROCESSOR"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "0a4e1b92-d0d3-3222-af36-93d92e06e6be",
+              "identifier" : "9ca7b259-b1d9-37f6-91b3-c28f9320560a",
+              "instanceIdentifier" : "01213542-db18-3c22-3841-7f530fcba1cd",
+              "labelIndex" : 1,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "partitioningAttribute" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "success" ],
+              "source" : {
+                "comments" : "",
+                "groupId" : "0a4e1b92-d0d3-3222-af36-93d92e06e6be",
+                "id" : "0cb4f880-5965-3f8f-8ce4-9008440dad77",
+                "instanceIdentifier" : "9991a47a-afb9-3587-c9d6-e9b6833d0a5a",
+                "name" : "Route On Any Catalog",
+                "type" : "PROCESSOR"
+              },
+              "zIndex" : 0
+            }, {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "",
+                "groupId" : "0a4e1b92-d0d3-3222-af36-93d92e06e6be",
+                "id" : "15343f0b-4820-3001-a4da-ff81418f4359",
+                "instanceIdentifier" : "f5eff148-2f6a-3423-a560-d5b09071595e",
+                "name" : "NEXT",
+                "type" : "OUTPUT_PORT"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "0a4e1b92-d0d3-3222-af36-93d92e06e6be",
+              "identifier" : "444475cd-f64f-3fe6-832e-862131a5fe8b",
+              "instanceIdentifier" : "7874c358-5a0e-3da5-75b7-c0e3bea2ebcd",
+              "labelIndex" : 1,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "partitioningAttribute" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "next" ],
+              "source" : {
+                "comments" : "",
+                "groupId" : "0a4e1b92-d0d3-3222-af36-93d92e06e6be",
+                "id" : "4796251d-2f14-3d4b-818b-eb9ecf7c7f3b",
+                "instanceIdentifier" : "ccade010-5310-3d25-825f-a55d62eaca2a",
+                "name" : "Penalize Document",
+                "type" : "PROCESSOR"
+              },
+              "zIndex" : 0
+            }, {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "",
+                "groupId" : "0a4e1b92-d0d3-3222-af36-93d92e06e6be",
+                "id" : "1b1e05b6-ac3a-31c0-b14d-393013bd5573",
+                "instanceIdentifier" : "24cba5f0-1301-3149-e5d6-6111ab895742",
+                "name" : "OUTPUT",
+                "type" : "OUTPUT_PORT"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "0a4e1b92-d0d3-3222-af36-93d92e06e6be",
+              "identifier" : "1fd50e55-4654-35e8-a0a2-d090508acfcf",
+              "instanceIdentifier" : "07de3223-5876-35f1-5732-07fa54754a11",
+              "labelIndex" : 1,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "partitioningAttribute" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "success" ],
+              "source" : {
+                "comments" : "",
+                "groupId" : "0a4e1b92-d0d3-3222-af36-93d92e06e6be",
+                "id" : "a6766a9f-f781-3d2b-8250-2424effd161c",
+                "instanceIdentifier" : "b3d679f0-57aa-39e7-4acb-e70f79192e12",
+                "name" : "Track Document",
+                "type" : "PROCESSOR"
+              },
+              "zIndex" : 0
+            }, {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ {
+                "x" : 1160.0,
+                "y" : 640.0
+              }, {
+                "x" : 984.0,
+                "y" : 640.0
+              } ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "",
+                "groupId" : "0a4e1b92-d0d3-3222-af36-93d92e06e6be",
+                "id" : "4796251d-2f14-3d4b-818b-eb9ecf7c7f3b",
+                "instanceIdentifier" : "ccade010-5310-3d25-825f-a55d62eaca2a",
+                "name" : "Penalize Document",
+                "type" : "PROCESSOR"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "0a4e1b92-d0d3-3222-af36-93d92e06e6be",
+              "identifier" : "ff66b03e-9711-3d36-8fcf-b58543544c86",
+              "instanceIdentifier" : "03a5cafa-1382-3649-76df-4d50d0e94648",
+              "labelIndex" : 1,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "partitioningAttribute" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "wait" ],
+              "source" : {
+                "comments" : "",
+                "groupId" : "0a4e1b92-d0d3-3222-af36-93d92e06e6be",
+                "id" : "4796251d-2f14-3d4b-818b-eb9ecf7c7f3b",
+                "instanceIdentifier" : "ccade010-5310-3d25-825f-a55d62eaca2a",
+                "name" : "Penalize Document",
+                "type" : "PROCESSOR"
+              },
+              "zIndex" : 0
+            } ],
+            "controllerServices" : [ ],
+            "defaultBackPressureDataSizeThreshold" : "1 GB",
+            "defaultBackPressureObjectThreshold" : 10000,
+            "defaultFlowFileExpiration" : "0 sec",
+            "flowFileConcurrency" : "UNBOUNDED",
+            "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+            "funnels" : [ ],
+            "groupIdentifier" : "72a7782b-2acc-319d-abb6-41fdcfc5a77e",
+            "identifier" : "0a4e1b92-d0d3-3222-af36-93d92e06e6be",
+            "inputPorts" : [ {
+              "allowRemoteAccess" : false,
+              "comments" : "",
+              "componentType" : "INPUT_PORT",
+              "concurrentlySchedulableTaskCount" : 1,
+              "groupIdentifier" : "0a4e1b92-d0d3-3222-af36-93d92e06e6be",
+              "identifier" : "8fafa0c1-6c8f-369a-883b-9899ded3ea64",
+              "instanceIdentifier" : "52f5f852-467a-3c01-6d1a-c2ab9a32a0ec",
+              "name" : "INPUT",
+              "position" : {
+                "x" : -392.0,
+                "y" : -40.0
+              },
+              "scheduledState" : "ENABLED",
+              "type" : "INPUT_PORT"
+            } ],
+            "instanceIdentifier" : "f8b6573c-f3a9-3e6a-85bf-5fe726a6a539",
+            "labels" : [ {
+              "componentType" : "LABEL",
+              "groupIdentifier" : "0a4e1b92-d0d3-3222-af36-93d92e06e6be",
+              "height" : 864.0,
+              "identifier" : "6f162df2-f981-3946-9e14-1dec7c4d8b23",
+              "instanceIdentifier" : "3e6b88b5-026e-3c95-bbe1-bfcac84e41a1",
+              "label" : "Route on Any Catalog with NRT",
+              "position" : {
+                "x" : -280.0,
+                "y" : -144.0
+              },
+              "style" : {
+                "background-color" : "#cceeff",
+                "font-size" : "24px"
+              },
+              "width" : 1928.0,
+              "zIndex" : 0
+            } ],
+            "name" : "Route on Any Catalog with NRT",
+            "outputPorts" : [ {
+              "allowRemoteAccess" : false,
+              "comments" : "",
+              "componentType" : "OUTPUT_PORT",
+              "concurrentlySchedulableTaskCount" : 1,
+              "groupIdentifier" : "0a4e1b92-d0d3-3222-af36-93d92e06e6be",
+              "identifier" : "1b1e05b6-ac3a-31c0-b14d-393013bd5573",
+              "instanceIdentifier" : "24cba5f0-1301-3149-e5d6-6111ab895742",
+              "name" : "OUTPUT",
+              "position" : {
+                "x" : -392.0,
+                "y" : 488.0
+              },
+              "scheduledState" : "ENABLED",
+              "type" : "OUTPUT_PORT"
+            }, {
+              "allowRemoteAccess" : false,
+              "comments" : "",
+              "componentType" : "OUTPUT_PORT",
+              "concurrentlySchedulableTaskCount" : 1,
+              "groupIdentifier" : "0a4e1b92-d0d3-3222-af36-93d92e06e6be",
+              "identifier" : "15343f0b-4820-3001-a4da-ff81418f4359",
+              "instanceIdentifier" : "f5eff148-2f6a-3423-a560-d5b09071595e",
+              "name" : "NEXT",
+              "position" : {
+                "x" : 1528.0,
+                "y" : 208.0
+              },
+              "scheduledState" : "ENABLED",
+              "type" : "OUTPUT_PORT"
+            } ],
+            "position" : {
+              "x" : 896.0,
+              "y" : 72.0
+            },
+            "processGroups" : [ ],
+            "processors" : [ {
+              "autoTerminatedRelationships" : [ ],
+              "backoffMechanism" : "PENALIZE_FLOWFILE",
+              "bulletinLevel" : "NONE",
+              "bundle" : {
+                "artifact" : "nifi-update-attribute-nar",
+                "group" : "org.apache.nifi",
+                "version" : "1.22.0"
+              },
+              "comments" : "",
+              "componentType" : "PROCESSOR",
+              "concurrentlySchedulableTaskCount" : 1,
+              "executionNode" : "ALL",
+              "groupIdentifier" : "0a4e1b92-d0d3-3222-af36-93d92e06e6be",
+              "identifier" : "f636530f-e1d3-3fd7-863d-e7185dd68488",
+              "instanceIdentifier" : "0b515352-e42f-30f4-833b-2a2a7b5832ae",
+              "maxBackoffPeriod" : "10 mins",
+              "name" : "Set stage.name and stage.start.time",
+              "penaltyDuration" : "0 sec",
+              "position" : {
+                "x" : 160.0,
+                "y" : -80.0
+              },
+              "properties" : {
+                "stage.start.time" : "${now():toNumber()}",
+                "stage.name" : "URL Stage 1d (Database), Update Category URL Fallback",
+                "Store State" : "Do not store state",
+                "canonical-value-lookup-cache-size" : "100",
+                "flow.name" : "${pipe.name}"
+              },
+              "propertyDescriptors" : {
+                "stage.start.time" : {
+                  "displayName" : "stage.start.time",
+                  "identifiesControllerService" : false,
+                  "name" : "stage.start.time",
+                  "sensitive" : false
+                },
+                "stage.name" : {
+                  "displayName" : "stage.name",
+                  "identifiesControllerService" : false,
+                  "name" : "stage.name",
+                  "sensitive" : false
+                },
+                "Delete Attributes Expression" : {
+                  "displayName" : "Delete Attributes Expression",
+                  "identifiesControllerService" : false,
+                  "name" : "Delete Attributes Expression",
+                  "sensitive" : false
+                },
+                "Store State" : {
+                  "displayName" : "Store State",
+                  "identifiesControllerService" : false,
+                  "name" : "Store State",
+                  "sensitive" : false
+                },
+                "canonical-value-lookup-cache-size" : {
+                  "displayName" : "Cache Value Lookup Cache Size",
+                  "identifiesControllerService" : false,
+                  "name" : "canonical-value-lookup-cache-size",
+                  "sensitive" : false
+                },
+                "flow.name" : {
+                  "displayName" : "flow.name",
+                  "identifiesControllerService" : false,
+                  "name" : "flow.name",
+                  "sensitive" : false
+                },
+                "Stateful Variables Initial Value" : {
+                  "displayName" : "Stateful Variables Initial Value",
+                  "identifiesControllerService" : false,
+                  "name" : "Stateful Variables Initial Value",
+                  "sensitive" : false
+                }
+              },
+              "retriedRelationships" : [ ],
+              "retryCount" : 10,
+              "runDurationMillis" : 0,
+              "scheduledState" : "ENABLED",
+              "schedulingPeriod" : "0 sec",
+              "schedulingStrategy" : "TIMER_DRIVEN",
+              "style" : { },
+              "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
+              "yieldDuration" : "1 sec"
+            }, {
+              "autoTerminatedRelationships" : [ ],
+              "backoffMechanism" : "PENALIZE_FLOWFILE",
+              "bulletinLevel" : "NONE",
+              "bundle" : {
+                "artifact" : "commerce-search-processors-nar",
+                "group" : "com.hcl.commerce",
+                "version" : "9.1.16.0"
+              },
+              "comments" : "",
+              "componentType" : "PROCESSOR",
+              "concurrentlySchedulableTaskCount" : 1,
+              "executionNode" : "ALL",
+              "groupIdentifier" : "0a4e1b92-d0d3-3222-af36-93d92e06e6be",
+              "identifier" : "4796251d-2f14-3d4b-818b-eb9ecf7c7f3b",
+              "instanceIdentifier" : "ccade010-5310-3d25-825f-a55d62eaca2a",
+              "maxBackoffPeriod" : "10 mins",
+              "name" : "Penalize Document",
+              "penaltyDuration" : "1 sec",
+              "position" : {
+                "x" : 808.0,
+                "y" : 448.0
+              },
+              "properties" : { },
+              "propertyDescriptors" : { },
+              "retriedRelationships" : [ ],
+              "retryCount" : 10,
+              "runDurationMillis" : 0,
+              "scheduledState" : "ENABLED",
+              "schedulingPeriod" : "0 sec",
+              "schedulingStrategy" : "TIMER_DRIVEN",
+              "style" : {
+                "background-color" : "#0000ff"
+              },
+              "type" : "com.hcl.software.data.ingest.common.processors.PenalizeDocument",
+              "yieldDuration" : "1 sec"
+            }, {
+              "autoTerminatedRelationships" : [ ],
+              "backoffMechanism" : "PENALIZE_FLOWFILE",
+              "bulletinLevel" : "WARN",
+              "bundle" : {
+                "artifact" : "commerce-search-processors-nar",
+                "group" : "com.hcl.commerce",
+                "version" : "9.1.16.0"
+              },
+              "comments" : "",
+              "componentType" : "PROCESSOR",
+              "concurrentlySchedulableTaskCount" : 1,
+              "executionNode" : "ALL",
+              "groupIdentifier" : "0a4e1b92-d0d3-3222-af36-93d92e06e6be",
+              "identifier" : "0cb4f880-5965-3f8f-8ce4-9008440dad77",
+              "instanceIdentifier" : "9991a47a-afb9-3587-c9d6-e9b6833d0a5a",
+              "maxBackoffPeriod" : "10 mins",
+              "name" : "Route On Any Catalog",
+              "penaltyDuration" : "0 sec",
+              "position" : {
+                "x" : 160.0,
+                "y" : 168.0
+              },
+              "properties" : {
+                "Route on other Sales Catalogs" : "allow",
+                "Route on Master Catalog" : "allow",
+                "Route on Default Catalog" : "allow"
+              },
+              "propertyDescriptors" : {
+                "Route on other Sales Catalogs" : {
+                  "displayName" : "Route on other Sales Catalogs",
+                  "identifiesControllerService" : false,
+                  "name" : "Route on other Sales Catalogs",
+                  "sensitive" : false
+                },
+                "Route on Master Catalog" : {
+                  "displayName" : "Route on Master Catalog",
+                  "identifiesControllerService" : false,
+                  "name" : "Route on Master Catalog",
+                  "sensitive" : false
+                },
+                "Route on Default Catalog" : {
+                  "displayName" : "Route on Default Catalog",
+                  "identifiesControllerService" : false,
+                  "name" : "Route on Default Catalog",
+                  "sensitive" : false
+                }
+              },
+              "retriedRelationships" : [ ],
+              "retryCount" : 10,
+              "runDurationMillis" : 0,
+              "scheduledState" : "ENABLED",
+              "schedulingPeriod" : "0 sec",
+              "schedulingStrategy" : "TIMER_DRIVEN",
+              "style" : {
+                "background-color" : "#0000ff"
+              },
+              "type" : "com.hcl.software.data.ingest.common.processors.RouteOnCatalog",
+              "yieldDuration" : "1 sec"
+            }, {
+              "autoTerminatedRelationships" : [ ],
+              "backoffMechanism" : "PENALIZE_FLOWFILE",
+              "bulletinLevel" : "NONE",
+              "bundle" : {
+                "artifact" : "nifi-standard-nar",
+                "group" : "org.apache.nifi",
+                "version" : "1.22.0"
+              },
+              "comments" : "",
+              "componentType" : "PROCESSOR",
+              "concurrentlySchedulableTaskCount" : 1,
+              "executionNode" : "ALL",
+              "groupIdentifier" : "0a4e1b92-d0d3-3222-af36-93d92e06e6be",
+              "identifier" : "5b257c58-a8c5-35b3-bba8-47e5c4beec12",
+              "instanceIdentifier" : "81025f0d-c42b-32d5-e39a-e94f811c52d5",
+              "maxBackoffPeriod" : "10 mins",
+              "name" : "Route on NRT",
+              "penaltyDuration" : "0 sec",
+              "position" : {
+                "x" : 808.0,
+                "y" : 168.0
+              },
+              "properties" : {
+                "nrt" : "${flow.NRT:equalsIgnoreCase('true')}",
+                "Routing Strategy" : "Route to Property name"
+              },
+              "propertyDescriptors" : {
+                "nrt" : {
+                  "displayName" : "nrt",
+                  "identifiesControllerService" : false,
+                  "name" : "nrt",
+                  "sensitive" : false
+                },
+                "Routing Strategy" : {
+                  "displayName" : "Routing Strategy",
+                  "identifiesControllerService" : false,
+                  "name" : "Routing Strategy",
+                  "sensitive" : false
+                }
+              },
+              "retriedRelationships" : [ ],
+              "retryCount" : 10,
+              "runDurationMillis" : 0,
+              "scheduledState" : "ENABLED",
+              "schedulingPeriod" : "0 sec",
+              "schedulingStrategy" : "TIMER_DRIVEN",
+              "style" : { },
+              "type" : "org.apache.nifi.processors.standard.RouteOnAttribute",
+              "yieldDuration" : "1 sec"
+            }, {
+              "autoTerminatedRelationships" : [ "failure" ],
+              "backoffMechanism" : "PENALIZE_FLOWFILE",
+              "bulletinLevel" : "WARN",
+              "bundle" : {
+                "artifact" : "commerce-search-processors-nar",
+                "group" : "com.hcl.commerce",
+                "version" : "9.1.16.0"
+              },
+              "comments" : "",
+              "componentType" : "PROCESSOR",
+              "concurrentlySchedulableTaskCount" : 1,
+              "executionNode" : "ALL",
+              "groupIdentifier" : "0a4e1b92-d0d3-3222-af36-93d92e06e6be",
+              "identifier" : "a6766a9f-f781-3d2b-8250-2424effd161c",
+              "instanceIdentifier" : "b3d679f0-57aa-39e7-4acb-e70f79192e12",
+              "maxBackoffPeriod" : "10 mins",
+              "name" : "Track Document",
+              "penaltyDuration" : "0 sec",
+              "position" : {
+                "x" : 160.0,
+                "y" : 448.0
+              },
+              "properties" : {
+                "Cache TTL" : "3600"
+              },
+              "propertyDescriptors" : {
+                "Cache TTL" : {
+                  "displayName" : "Cache TTL",
+                  "identifiesControllerService" : false,
+                  "name" : "Cache TTL",
+                  "sensitive" : false
+                }
+              },
+              "retriedRelationships" : [ ],
+              "retryCount" : 10,
+              "runDurationMillis" : 0,
+              "scheduledState" : "ENABLED",
+              "schedulingPeriod" : "0 sec",
+              "schedulingStrategy" : "TIMER_DRIVEN",
+              "style" : {
+                "background-color" : "#0000ff"
+              },
+              "type" : "com.hcl.software.data.ingest.event.processors.TrackDocument",
+              "yieldDuration" : "1 sec"
+            } ],
+            "remoteProcessGroups" : [ ],
+            "variables" : { }
+          } ],
+          "processors" : [ ],
+          "remoteProcessGroups" : [ {
+            "comments" : "",
+            "communicationsTimeout" : "1800 sec",
+            "componentType" : "REMOTE_PROCESS_GROUP",
+            "groupIdentifier" : "72a7782b-2acc-319d-abb6-41fdcfc5a77e",
+            "identifier" : "50087271-b1e7-335c-9d7f-c9760a967e49",
+            "inputPorts" : [ {
+              "batchSize" : { },
+              "componentType" : "REMOTE_INPUT_PORT",
+              "concurrentlySchedulableTaskCount" : 1,
+              "groupIdentifier" : "50087271-b1e7-335c-9d7f-c9760a967e49",
+              "identifier" : "12ac9ab0-6aa7-3268-b77a-7161da6d7859",
+              "instanceIdentifier" : "ebb82b00-1fe5-330f-405c-b865ec08e4ca",
+              "name" : "Bulk Description INPUT",
+              "remoteGroupId" : "50087271-b1e7-335c-9d7f-c9760a967e49",
+              "scheduledState" : "ENABLED",
+              "targetId" : "1c2f5dc4-018c-1000-5863-aeba1be6fe04",
+              "useCompression" : false
+            }, {
+              "batchSize" : { },
+              "comments" : "",
+              "componentType" : "REMOTE_INPUT_PORT",
+              "concurrentlySchedulableTaskCount" : 1,
+              "groupIdentifier" : "50087271-b1e7-335c-9d7f-c9760a967e49",
+              "identifier" : "71c97217-c011-3ca2-917c-e63e91f0e130",
+              "instanceIdentifier" : "ab741c65-9f50-37b9-3dc5-b84e4daeaa61",
+              "name" : "Routing INPUT",
+              "remoteGroupId" : "50087271-b1e7-335c-9d7f-c9760a967e49",
+              "scheduledState" : "ENABLED",
+              "targetId" : "f21b3c7b-0df6-3ccc-6073-9bbccb20b0a0",
+              "useCompression" : false
+            }, {
+              "batchSize" : { },
+              "componentType" : "REMOTE_INPUT_PORT",
+              "concurrentlySchedulableTaskCount" : 1,
+              "groupIdentifier" : "50087271-b1e7-335c-9d7f-c9760a967e49",
+              "identifier" : "1217b3f2-eddd-3db4-8598-f30a06507a06",
+              "instanceIdentifier" : "08ffe848-c8e7-37af-7792-a37996f8d45e",
+              "name" : "Bulk Inventory INPUT",
+              "remoteGroupId" : "50087271-b1e7-335c-9d7f-c9760a967e49",
+              "scheduledState" : "ENABLED",
+              "targetId" : "1c2f5ecd-018c-1000-cdf7-9b02b869d24e",
+              "useCompression" : false
+            }, {
+              "batchSize" : { },
+              "componentType" : "REMOTE_INPUT_PORT",
+              "concurrentlySchedulableTaskCount" : 1,
+              "groupIdentifier" : "50087271-b1e7-335c-9d7f-c9760a967e49",
+              "identifier" : "e8d42901-4b7d-35ec-86df-cb342ea42b14",
+              "instanceIdentifier" : "ff8d0688-612e-3702-72fb-abae40114e84",
+              "name" : "Bulk Catalog INPUT",
+              "remoteGroupId" : "50087271-b1e7-335c-9d7f-c9760a967e49",
+              "scheduledState" : "ENABLED",
+              "targetId" : "1c2f5b93-018c-1000-9fa0-a6f70fa7aef3",
+              "useCompression" : false
+            }, {
+              "batchSize" : { },
+              "componentType" : "REMOTE_INPUT_PORT",
+              "concurrentlySchedulableTaskCount" : 1,
+              "groupIdentifier" : "50087271-b1e7-335c-9d7f-c9760a967e49",
+              "identifier" : "9b53cbb9-194d-35c0-ad8b-fdacabd6519f",
+              "instanceIdentifier" : "5f04f1b0-7979-3798-caba-ea657b50bac6",
+              "name" : "Run INPUT",
+              "remoteGroupId" : "50087271-b1e7-335c-9d7f-c9760a967e49",
+              "scheduledState" : "ENABLED",
+              "targetId" : "1c2f59a2-018c-1000-0141-ad3b2f1e4430",
+              "useCompression" : false
+            }, {
+              "batchSize" : { },
+              "componentType" : "REMOTE_INPUT_PORT",
+              "concurrentlySchedulableTaskCount" : 1,
+              "groupIdentifier" : "50087271-b1e7-335c-9d7f-c9760a967e49",
+              "identifier" : "4141a808-fe44-374a-83b8-6c380e1a4d59",
+              "instanceIdentifier" : "d7a0e4f7-d242-3a9f-6e70-9775188d1a8d",
+              "name" : "Logger INPUT",
+              "remoteGroupId" : "50087271-b1e7-335c-9d7f-c9760a967e49",
+              "scheduledState" : "ENABLED",
+              "targetId" : "1c2f58dc-018c-1000-ecad-74e613291089",
+              "useCompression" : false
+            }, {
+              "batchSize" : { },
+              "componentType" : "REMOTE_INPUT_PORT",
+              "concurrentlySchedulableTaskCount" : 1,
+              "groupIdentifier" : "50087271-b1e7-335c-9d7f-c9760a967e49",
+              "identifier" : "80219b46-b58c-3364-9ba6-4ffe3e06280a",
+              "instanceIdentifier" : "f062169b-e968-3832-a54e-ed2d079d4190",
+              "name" : "Bulk Price INPUT",
+              "remoteGroupId" : "50087271-b1e7-335c-9d7f-c9760a967e49",
+              "scheduledState" : "ENABLED",
+              "targetId" : "1c2f5e4c-018c-1000-f3ef-7993ffe5927a",
+              "useCompression" : false
+            }, {
+              "batchSize" : { },
+              "componentType" : "REMOTE_INPUT_PORT",
+              "concurrentlySchedulableTaskCount" : 1,
+              "groupIdentifier" : "50087271-b1e7-335c-9d7f-c9760a967e49",
+              "identifier" : "4ef213d5-a371-3f80-9ca0-8fd9f3600128",
+              "instanceIdentifier" : "395f7dcb-b463-33b9-8537-f2888a79a806",
+              "name" : "Bulk Category INPUT",
+              "remoteGroupId" : "50087271-b1e7-335c-9d7f-c9760a967e49",
+              "scheduledState" : "ENABLED",
+              "targetId" : "1c2f5ca6-018c-1000-ddc7-77e3c719dcc1",
+              "useCompression" : false
+            }, {
+              "batchSize" : { },
+              "componentType" : "REMOTE_INPUT_PORT",
+              "concurrentlySchedulableTaskCount" : 1,
+              "groupIdentifier" : "50087271-b1e7-335c-9d7f-c9760a967e49",
+              "identifier" : "c3c012b6-ed36-378b-9520-59ca4c37e256",
+              "instanceIdentifier" : "d1938f53-1461-39ef-c21a-4f3342717ec1",
+              "name" : "Bulk Product INPUT",
+              "remoteGroupId" : "50087271-b1e7-335c-9d7f-c9760a967e49",
+              "scheduledState" : "ENABLED",
+              "targetId" : "1c2f5d2e-018c-1000-2103-9a3d52ac7eef",
+              "useCompression" : false
+            }, {
+              "batchSize" : { },
+              "componentType" : "REMOTE_INPUT_PORT",
+              "concurrentlySchedulableTaskCount" : 1,
+              "groupIdentifier" : "50087271-b1e7-335c-9d7f-c9760a967e49",
+              "identifier" : "8b598489-58f7-315e-aea8-c6463e14f8e0",
+              "instanceIdentifier" : "81f0b84d-aec7-37e0-5c7f-f11fefe55d74",
+              "name" : "Terminal INPUT",
+              "remoteGroupId" : "50087271-b1e7-335c-9d7f-c9760a967e49",
+              "scheduledState" : "ENABLED",
+              "targetId" : "1c2f5a34-018c-1000-7442-d5815f13bea4",
+              "useCompression" : false
+            }, {
+              "batchSize" : { },
+              "componentType" : "REMOTE_INPUT_PORT",
+              "concurrentlySchedulableTaskCount" : 1,
+              "groupIdentifier" : "50087271-b1e7-335c-9d7f-c9760a967e49",
+              "identifier" : "e35e4724-2aa7-3236-8806-a52186e0b8c2",
+              "instanceIdentifier" : "938a5ebe-deb0-3c24-482b-98f31cd81ff8",
+              "name" : "Bulk Attribute INPUT",
+              "remoteGroupId" : "50087271-b1e7-335c-9d7f-c9760a967e49",
+              "scheduledState" : "ENABLED",
+              "targetId" : "1c2f5c1d-018c-1000-8ce3-dde5daa3b39e",
+              "useCompression" : false
+            }, {
+              "batchSize" : { },
+              "componentType" : "REMOTE_INPUT_PORT",
+              "concurrentlySchedulableTaskCount" : 1,
+              "groupIdentifier" : "50087271-b1e7-335c-9d7f-c9760a967e49",
+              "identifier" : "ed987854-6ad1-34ed-89d6-8de938f889f8",
+              "instanceIdentifier" : "96ebd7fd-a155-3ac6-f4c3-13b05aabf932",
+              "name" : "Bulk Dataload INPUT",
+              "remoteGroupId" : "50087271-b1e7-335c-9d7f-c9760a967e49",
+              "scheduledState" : "ENABLED",
+              "targetId" : "1c2f5fc7-018c-1000-33ec-c6a592536cd1",
+              "useCompression" : false
+            }, {
+              "batchSize" : { },
+              "componentType" : "REMOTE_INPUT_PORT",
+              "concurrentlySchedulableTaskCount" : 1,
+              "groupIdentifier" : "50087271-b1e7-335c-9d7f-c9760a967e49",
+              "identifier" : "0c4e5548-15c8-35b8-b97a-b6acc4b5cb6b",
+              "instanceIdentifier" : "1b71e36e-e6aa-3181-aa05-1d233e6c6b49",
+              "name" : "Bulk Store INPUT",
+              "remoteGroupId" : "50087271-b1e7-335c-9d7f-c9760a967e49",
+              "scheduledState" : "ENABLED",
+              "targetId" : "1c2f5af5-018c-1000-e6d9-0680b266c10f",
+              "useCompression" : false
+            }, {
+              "batchSize" : { },
+              "componentType" : "REMOTE_INPUT_PORT",
+              "concurrentlySchedulableTaskCount" : 1,
+              "groupIdentifier" : "50087271-b1e7-335c-9d7f-c9760a967e49",
+              "identifier" : "90111048-b955-3a8e-96c5-37488b965b9f",
+              "instanceIdentifier" : "d59627d5-09e9-30bb-9919-fdb76e5d859b",
+              "name" : "Bulk URL INPUT",
+              "remoteGroupId" : "50087271-b1e7-335c-9d7f-c9760a967e49",
+              "scheduledState" : "ENABLED",
+              "targetId" : "1c2f5f47-018c-1000-6d42-da4b50468f7f",
+              "useCompression" : false
+            } ],
+            "instanceIdentifier" : "ae900d49-eaa5-39b1-2cec-705766f719b9",
+            "name" : "NiFi Flow",
+            "outputPorts" : [ ],
+            "position" : {
+              "x" : -520.0,
+              "y" : 72.0
+            },
+            "proxyHost" : "",
+            "proxyUser" : "",
+            "targetUri" : "http://localhost:30600/nifi",
+            "targetUris" : "http://localhost:30600/nifi",
+            "transportProtocol" : "RAW",
+            "yieldDuration" : "10 sec"
+          }, {
+            "comments" : "",
+            "communicationsTimeout" : "1800 sec",
+            "componentType" : "REMOTE_PROCESS_GROUP",
+            "groupIdentifier" : "72a7782b-2acc-319d-abb6-41fdcfc5a77e",
+            "identifier" : "671ac24b-1a8c-3fee-b049-bb9a5a509d00",
+            "inputPorts" : [ {
+              "batchSize" : { },
+              "componentType" : "REMOTE_INPUT_PORT",
+              "concurrentlySchedulableTaskCount" : 1,
+              "groupIdentifier" : "671ac24b-1a8c-3fee-b049-bb9a5a509d00",
+              "identifier" : "6a1c8fec-1542-364f-ad1f-813243a64b38",
+              "instanceIdentifier" : "e112e4d6-cf0f-35bf-dbc0-a3f3a1298c40",
+              "name" : "Bulk Description INPUT",
+              "remoteGroupId" : "671ac24b-1a8c-3fee-b049-bb9a5a509d00",
+              "scheduledState" : "ENABLED",
+              "targetId" : "1c2f5dc4-018c-1000-5863-aeba1be6fe04",
+              "useCompression" : false
+            }, {
+              "batchSize" : { },
+              "componentType" : "REMOTE_INPUT_PORT",
+              "concurrentlySchedulableTaskCount" : 1,
+              "groupIdentifier" : "671ac24b-1a8c-3fee-b049-bb9a5a509d00",
+              "identifier" : "035addf8-e98f-3978-b388-f2fbed56e723",
+              "instanceIdentifier" : "9b99157b-c86e-368c-9dd1-b48bf873fc85",
+              "name" : "Bulk Inventory INPUT",
+              "remoteGroupId" : "671ac24b-1a8c-3fee-b049-bb9a5a509d00",
+              "scheduledState" : "ENABLED",
+              "targetId" : "1c2f5ecd-018c-1000-cdf7-9b02b869d24e",
+              "useCompression" : false
+            }, {
+              "batchSize" : { },
+              "comments" : "",
+              "componentType" : "REMOTE_INPUT_PORT",
+              "concurrentlySchedulableTaskCount" : 1,
+              "groupIdentifier" : "671ac24b-1a8c-3fee-b049-bb9a5a509d00",
+              "identifier" : "558a7ba1-6e25-39e1-969b-9e16ae9959cb",
+              "instanceIdentifier" : "d164e214-eea4-3455-011d-4ba9291e614e",
+              "name" : "Routing INPUT",
+              "remoteGroupId" : "671ac24b-1a8c-3fee-b049-bb9a5a509d00",
+              "scheduledState" : "ENABLED",
+              "targetId" : "f21b3c7b-0df6-3ccc-6073-9bbccb20b0a0",
+              "useCompression" : false
+            }, {
+              "batchSize" : { },
+              "componentType" : "REMOTE_INPUT_PORT",
+              "concurrentlySchedulableTaskCount" : 1,
+              "groupIdentifier" : "671ac24b-1a8c-3fee-b049-bb9a5a509d00",
+              "identifier" : "c5b9bcf5-8788-36b2-9588-1145f83a34bd",
+              "instanceIdentifier" : "5cf0e04a-93d0-3a5c-1031-7445dcbd3363",
+              "name" : "Bulk Catalog INPUT",
+              "remoteGroupId" : "671ac24b-1a8c-3fee-b049-bb9a5a509d00",
+              "scheduledState" : "ENABLED",
+              "targetId" : "1c2f5b93-018c-1000-9fa0-a6f70fa7aef3",
+              "useCompression" : false
+            }, {
+              "batchSize" : { },
+              "componentType" : "REMOTE_INPUT_PORT",
+              "concurrentlySchedulableTaskCount" : 1,
+              "groupIdentifier" : "671ac24b-1a8c-3fee-b049-bb9a5a509d00",
+              "identifier" : "61c0aaef-7624-39f1-9033-83123c8d4223",
+              "instanceIdentifier" : "6016ba31-3849-3e3d-3177-f3900e593cf3",
+              "name" : "Run INPUT",
+              "remoteGroupId" : "671ac24b-1a8c-3fee-b049-bb9a5a509d00",
+              "scheduledState" : "ENABLED",
+              "targetId" : "1c2f59a2-018c-1000-0141-ad3b2f1e4430",
+              "useCompression" : false
+            }, {
+              "batchSize" : { },
+              "componentType" : "REMOTE_INPUT_PORT",
+              "concurrentlySchedulableTaskCount" : 1,
+              "groupIdentifier" : "671ac24b-1a8c-3fee-b049-bb9a5a509d00",
+              "identifier" : "ce1e5094-f3ce-33d0-801f-8e6869c33eb4",
+              "instanceIdentifier" : "8422adb3-1365-36f8-2ec7-6b8988fbdc0f",
+              "name" : "Logger INPUT",
+              "remoteGroupId" : "671ac24b-1a8c-3fee-b049-bb9a5a509d00",
+              "scheduledState" : "ENABLED",
+              "targetId" : "1c2f58dc-018c-1000-ecad-74e613291089",
+              "useCompression" : false
+            }, {
+              "batchSize" : { },
+              "componentType" : "REMOTE_INPUT_PORT",
+              "concurrentlySchedulableTaskCount" : 1,
+              "groupIdentifier" : "671ac24b-1a8c-3fee-b049-bb9a5a509d00",
+              "identifier" : "c694c9aa-5eee-3280-85ee-1d02e35bf773",
+              "instanceIdentifier" : "861d5549-0dcd-3cb6-c260-755f4d50315c",
+              "name" : "Bulk Price INPUT",
+              "remoteGroupId" : "671ac24b-1a8c-3fee-b049-bb9a5a509d00",
+              "scheduledState" : "ENABLED",
+              "targetId" : "1c2f5e4c-018c-1000-f3ef-7993ffe5927a",
+              "useCompression" : false
+            }, {
+              "batchSize" : { },
+              "componentType" : "REMOTE_INPUT_PORT",
+              "concurrentlySchedulableTaskCount" : 1,
+              "groupIdentifier" : "671ac24b-1a8c-3fee-b049-bb9a5a509d00",
+              "identifier" : "9d7a873e-6920-34ed-b2bd-d296e3ea1f21",
+              "instanceIdentifier" : "92c9773c-25c5-3276-5277-ae033be44cc2",
+              "name" : "Bulk Category INPUT",
+              "remoteGroupId" : "671ac24b-1a8c-3fee-b049-bb9a5a509d00",
+              "scheduledState" : "ENABLED",
+              "targetId" : "1c2f5ca6-018c-1000-ddc7-77e3c719dcc1",
+              "useCompression" : false
+            }, {
+              "batchSize" : { },
+              "componentType" : "REMOTE_INPUT_PORT",
+              "concurrentlySchedulableTaskCount" : 1,
+              "groupIdentifier" : "671ac24b-1a8c-3fee-b049-bb9a5a509d00",
+              "identifier" : "eee62fb2-d06b-3191-a9a2-b8466885902f",
+              "instanceIdentifier" : "b84d6a83-5923-3acc-3489-3b3e4569caa4",
+              "name" : "Bulk Product INPUT",
+              "remoteGroupId" : "671ac24b-1a8c-3fee-b049-bb9a5a509d00",
+              "scheduledState" : "ENABLED",
+              "targetId" : "1c2f5d2e-018c-1000-2103-9a3d52ac7eef",
+              "useCompression" : false
+            }, {
+              "batchSize" : { },
+              "componentType" : "REMOTE_INPUT_PORT",
+              "concurrentlySchedulableTaskCount" : 1,
+              "groupIdentifier" : "671ac24b-1a8c-3fee-b049-bb9a5a509d00",
+              "identifier" : "0b6376f3-7913-3013-877b-1c6783a8a538",
+              "instanceIdentifier" : "fa64ef26-9f68-3d73-6881-3d39e4b04276",
+              "name" : "Terminal INPUT",
+              "remoteGroupId" : "671ac24b-1a8c-3fee-b049-bb9a5a509d00",
+              "scheduledState" : "ENABLED",
+              "targetId" : "1c2f5a34-018c-1000-7442-d5815f13bea4",
+              "useCompression" : false
+            }, {
+              "batchSize" : { },
+              "componentType" : "REMOTE_INPUT_PORT",
+              "concurrentlySchedulableTaskCount" : 1,
+              "groupIdentifier" : "671ac24b-1a8c-3fee-b049-bb9a5a509d00",
+              "identifier" : "3abdf875-0406-324f-b672-729f71e39c9f",
+              "instanceIdentifier" : "dfa7651f-67b8-35ce-0879-4c12c4e66e2c",
+              "name" : "Bulk Attribute INPUT",
+              "remoteGroupId" : "671ac24b-1a8c-3fee-b049-bb9a5a509d00",
+              "scheduledState" : "ENABLED",
+              "targetId" : "1c2f5c1d-018c-1000-8ce3-dde5daa3b39e",
+              "useCompression" : false
+            }, {
+              "batchSize" : { },
+              "componentType" : "REMOTE_INPUT_PORT",
+              "concurrentlySchedulableTaskCount" : 1,
+              "groupIdentifier" : "671ac24b-1a8c-3fee-b049-bb9a5a509d00",
+              "identifier" : "f500b494-a32c-3d60-896f-b1d0e5802064",
+              "instanceIdentifier" : "1d77ccec-37da-30f5-8476-33051b25df47",
+              "name" : "Bulk Dataload INPUT",
+              "remoteGroupId" : "671ac24b-1a8c-3fee-b049-bb9a5a509d00",
+              "scheduledState" : "ENABLED",
+              "targetId" : "1c2f5fc7-018c-1000-33ec-c6a592536cd1",
+              "useCompression" : false
+            }, {
+              "batchSize" : { },
+              "componentType" : "REMOTE_INPUT_PORT",
+              "concurrentlySchedulableTaskCount" : 1,
+              "groupIdentifier" : "671ac24b-1a8c-3fee-b049-bb9a5a509d00",
+              "identifier" : "5d68a84d-8f2b-37f8-99a2-fb898cf595aa",
+              "instanceIdentifier" : "bb14f771-f87b-3abf-46db-e1423cf61e4b",
+              "name" : "Bulk Store INPUT",
+              "remoteGroupId" : "671ac24b-1a8c-3fee-b049-bb9a5a509d00",
+              "scheduledState" : "ENABLED",
+              "targetId" : "1c2f5af5-018c-1000-e6d9-0680b266c10f",
+              "useCompression" : false
+            }, {
+              "batchSize" : { },
+              "componentType" : "REMOTE_INPUT_PORT",
+              "concurrentlySchedulableTaskCount" : 1,
+              "groupIdentifier" : "671ac24b-1a8c-3fee-b049-bb9a5a509d00",
+              "identifier" : "9e47dcb1-6555-3a15-b004-7e81cb506b44",
+              "instanceIdentifier" : "7fb4b904-f689-312a-e77a-a3ddaa44cf41",
+              "name" : "Bulk URL INPUT",
+              "remoteGroupId" : "671ac24b-1a8c-3fee-b049-bb9a5a509d00",
+              "scheduledState" : "ENABLED",
+              "targetId" : "1c2f5f47-018c-1000-6d42-da4b50468f7f",
+              "useCompression" : false
+            } ],
+            "instanceIdentifier" : "301d9faa-0a7b-3ed1-51f3-adb3f982fe49",
+            "name" : "NiFi Flow",
+            "outputPorts" : [ ],
+            "position" : {
+              "x" : -520.0,
+              "y" : 416.0
+            },
+            "proxyHost" : "",
+            "proxyUser" : "",
+            "targetUri" : "http://localhost:30600/nifi",
+            "targetUris" : "http://localhost:30600/nifi",
+            "transportProtocol" : "RAW",
+            "yieldDuration" : "10 sec"
+          } ],
+          "variables" : {
+            "scroll.page.size" : "1000000",
+            "scroll.bucket.size" : "15000",
+            "scroll.refresh.index" : "false"
+          }
+        } ],
+        "processors" : [ ],
+        "remoteProcessGroups" : [ ],
+        "variables" : {
+          "pipe.name" : "",
+          "connector.name" : ""
+        }
+      },
+      "flowEncodingVersion" : "1.0",
+      "parameterContexts" : { },
+      "parameterProviders" : { }
+    }
+  }
+}
